@@ -1,697 +1,974 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IT 비즈니스에 필요한 클라우드 호스팅과 보안 서비스를 제공합니다.">
-  <meta name="keywords" content="클라우드, 보안클라우드, 디도스보안, 디도스방어, IPS, IDS">
-  <meta name="author" content="cloudnx">
-  <title>Seal Shield - Next Generation Cloud Platform</title>
-  <link rel="shortcut icon" href="./static/img/favicon.png">
-  <link rel="stylesheet" href="./static/css/plugins.css">
-  <link rel="stylesheet" href="./static/css/style.css">
-  <link rel="stylesheet" href="./static/css/colors/sky.css">
-  <link rel="preload" href="./static/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="stylesheet" href="./static/css/common.css">
-  <link rel="stylesheet" href="https://webfontworld.github.io/naver/NanumSquare.css">
-  <style>
-	.hangle {
-		font-family: 'NanumSquare';
-		font-weight: 450; 
-	}
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IT 비즈니스에 필요한 클라우드 호스팅과 보안 서비스를 제공합니다.">
+    <meta name="keywords" content="클라우드, 보안클라우드, 디도스보안, 디도스방어, IPS, IDS">
+    <meta name="author" content="cloudnx">
+    <title>Seal Shield - Next Generation Cloud Platform</title>
+    <link rel="shortcut icon" href="./static/img/favicon.png">
+    <link rel="stylesheet" href="./static/css/plugins.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/colors/sky.css">
+    <link rel="preload" href="./static/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="./static/css/common.css">
+    <link rel="stylesheet" href="https://webfontworld.github.io/naver/NanumSquare.css">
+    <style>
+        .hangle {
+            font-family: 'NanumSquare';
+            font-weight: 450;
+        }
+    </style>
 </head>
 
 <body>
     <div style='display:none' id='sbbhscc'></div>
-	<script type="text/javascript">
-	var sbbvscc='';
-	var sbbgscc='';
-	function genPid() {return String.fromCharCode(84)+String.fromCharCode(69) ; };
-	</script>
+    <script type="text/javascript">
+        var sbbvscc = '';
+        var sbbgscc = '';
+
+        function genPid() {
+            return String.fromCharCode(84) + String.fromCharCode(69);
+        };
+    </script>
     <div id='sbbfrcc' style='position: absolute; top: -10px; left: 30px; font-size:1px'></div>
-  	<script type="text/javascript">(function(XHR){var open=XHR.prototype.open;var send=XHR.prototype.send;var parser=document.createElement('a');XHR.prototype.open=function(method, url, async, user, pass){if(typeof async=='undefined'){async=true;}parser.href=url;if(parser.host==''){parser.href=parser.href;}this.ajax_hostname=parser.hostname;open.call(this, method, url, async, user, pass);};XHR.prototype.send=function(data){if(location.hostname==this.ajax_hostname)this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");send.call(this, data);}})(XMLHttpRequest);if(typeof(fetch)!="undefined"){var nsbbfetch=fetch;fetch=function(url, init){if(typeof(url)==="object" && typeof(url.url)==="string"){init={method: url.method, mode: url.mode, cache: url.cache, credentials: url.credentials, headers: url.headers, body: url.body};url=url.url;}function sbbSd(url, domain){var parser=document.createElement('a');parser.href=url;if(parser.host==''){parser.href=parser.href;}return parser.hostname==location.hostname;}if(sbbSd(url, document.domain)){init=typeof init !=='undefined' ? init :{};if(typeof(init.headers)==="undefined"){init.headers={};}init.headers['X-MOD-SBB-CTYPE']='fetch';}return nsbbfetch(url, init);};}function sbbgc(check_name){var start=document.cookie.indexOf(check_name+"=");var oVal='';var len=start+check_name.length+1;if((!start)&&(document.cookie.substring(0,check_name.length)!=check_name)){oVal='';}else if(start==-1){oVal='';}else{var end=document.cookie.indexOf(';',len);if(end==-1)end=document.cookie.length;var oVal=document.cookie.substring(len,end);};return oVal;}function addmg(inm,ext){var primgobj=document.createElement('IMG');primgobj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+"/sbbi/?sbbpg="+inm+(ext?"&"+ext:"");var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(primgobj);};function addprid(prid){var oldVal=sbbgc("PRLST");if((oldVal.indexOf(prid)==-1)&&(oldVal.split('/').length<5)){if(oldVal!=''){oldVal+='/';}document.cookie='PRLST='+oldVal+escape(prid)+';path=/; SameSite=Lax;';}}var sbbeccf=function(){this.sp3="jass";this.sf1=function(vd){return sf2(vd)+32;};var sf2=function(avd){return avd*12;};this.sf4=function(yavd){return yavd+2;};var strrp=function(str, key, value){if(str.indexOf('&'+key+'=')> -1 || str.indexOf(key+'=')==0){var idx=str.indexOf('&'+key+'=');if(idx==-1)idx=str.indexOf(key+'=');var end=str.indexOf('&', idx+1);var newstr;if(end !=-1)newstr=str.substr(0, idx)+str.substr(end+(idx ? 0 : 1))+'&'+key+'='+value;else newstr=str.substr(0, idx)+'&'+key+'='+value;return newstr;}else return str+'&'+key+'='+value;};var strgt=function(name, text){if(typeof text !='string')return "";var nameEQ=name+"=";var ca=text.split(/[;&]/);for(var i=0;i < ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1, c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length, c.length);}return "";};this.sfecgs={sbbgh:function(){var domain=document.location.host;if(domain.indexOf('www.')==0)domain=domain.replace('www.', '');return domain;}, f:function(name, value){var fv="";if(window.globalStorage){var host=this.sbbgh();try{if(typeof(value)!="undefined")globalStorage[host][name]=value;else{fv=globalStorage[host][name];if(typeof(fv.toString)!="undefined")fv=fv.toString();}}catch(e){}}return fv;}, name:"sbbrf"};this.sfecls={f:function(name, value){var fv="";try{if(window.localStorage){if(typeof(value)!="undefined")localStorage.setItem(name, value);else{fv=localStorage.getItem(name);if(typeof(fv.toString)!="undefined")fv=fv.toString();}}}catch(e){}return fv;}, name:"sbbrf"};this.sbbcv=function(invl){try{var invalArr=invl.split("-");if(invalArr.length>1){if(invalArr[0]=="A"||invalArr[0]=="D"){invl=invalArr[1];}else invl="";}if(invl==null||typeof(invl)=="undefined"||invl=="falseImgUT"||invl=="undefined"||invl=="null"||invl!=encodeURI(invl))invl="";if(typeof(invl).toLowerCase()=="string")if(invl.length>20)if(invl.substr(0,2)!="h4")invl="";}catch(ex){invl="";}return invl;};this.sbbsv=function(fv){for(var elm in this){if(this[elm].name=="sbbrf"){this[elm].f("altutgv2",fv);}}document.cookie="UTGv2="+fv+';expires=Tue, 16-Apr-24 06:05:14 GMT;path=/; SameSite=Lax;';};this.sbbgv=function(){var valArr=Array();var currVal="";for(var elm in this){if(this[elm].name=="sbbrf"){currVal=this[elm].f("altutgv2");currVal=this.sbbcv(currVal);if(currVal!="")valArr[currVal]=(typeof(valArr[currVal])!="undefined"?valArr[currVal]+1:1);}}var lb=0;var fv="";for(var val in valArr){if(valArr[val]>lb){fv=val;lb=valArr[val]}}if(fv=="")fv=sbbgc("UTGv2");fv=this.sbbcv(fv);if(fv!="")this.sbbsv(fv);else this.sbbsv("h400ca4bf3c9b5b07fb9dda92ae900127348");return fv;};};function m2vr(m1,m2){var i=0;var rc="";var est="ghijklmnopqrstuvwyz";var rnum;var rpl;var charm1=m1.charAt(i);var charm2=m2.charAt(i);while(charm1!=""||charm2!=""){rnum=Math.floor(Math.random()* est.length);rpl=est.substring(rnum,rnum+1);rc+=(charm1==""?rpl:charm1)+(charm2==""?rpl:charm2);i++;charm1=m1.charAt(i);charm2=m2.charAt(i);}return rc;}function sbbls(prid){try{var eut=sbbgc("UTGv2");window.sbbeccfi=new sbbeccf();window.sbbgs=sbbeccfi.sbbgv();if(eut!=sbbgs && sbbgs!="" && typeof(sbbfcr)=="undefined"){addmg('utMedia',"vii="+m2vr("105ef889c9e85e5e39eedaf09d786b47",sbbgs));}var sbbiframeObj=document.createElement('IFRAME');var dfx=new Date();sbbiframeObj.id='SBBCrossIframe';sbbiframeObj.title='SBBCrossIframe';sbbiframeObj.tabindex='-1';sbbiframeObj.lang='en';sbbiframeObj.style.visibility='hidden';sbbiframeObj.setAttribute('aria-hidden', 'true');sbbiframeObj.style.border='0px';if(document.all){sbbiframeObj.style.position='absolute';sbbiframeObj.style.top='-1px';sbbiframeObj.style.height='1px';sbbiframeObj.style.width='28px';}else{sbbiframeObj.style.height='1px';sbbiframeObj.style.width='0px';}sbbiframeObj.scrolling="NO";sbbiframeObj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+'/sbbi/?sbbpg=sbbShell&gprid='+prid+'';var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(sbbiframeObj);}catch(ex){;}}try{var y=unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));document.getElementById('sbbhscc').innerHTML=y;var x=unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));}catch(e){x='function genPid(){return "jser";}';}try{if(window.gprid==undefined)document.write('<'+'script type="text/javascri'+'pt">'+x+"var gprid=genPid();addprid(gprid);var sbbfcr=true;sbbls(gprid);<"+"/script>");}catch(e){addprid("dwer");}</script>
-	<div class="content-wrapper">
-		<header class="wrapper bg-soft-primary">
-			<nav class="navbar navbar-expand-lg classic transparent position-absolute navbar-light">
-				<div class="container flex-lg-row flex-nowrap align-items-center">
-					<div class="navbar-brand w-100">
-						<a href="/">
-							<h2 class="logo-dark" style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
-							<h2 class="logo-light" style="color: #FFFFFF; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
-						</a>
-					</div>
-					<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-						<div class="offcanvas-header d-lg-none">
-							<h3 class="text-white fs-30 mb-0">Seal Shield</h3>
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-						<ul class="navbar-nav">
-							<li class="nav-item dropdown dropdown-mega"> 
-								<a class="nav-link hangle" href="/">홈</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">디도스 보안존 상품</a>
-								<div class="dropdown-menu dropdown-lg">
-									<div class="dropdown-lg-content">
-										<div>
-											<h6 class="dropdown-header">Compute</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="./virtualServer.html">가상 서버</a></li>
-												<li><a class="dropdown-item hangle" href="./singleServer.html">단독 서버</a></li>
-												<li><a class="dropdown-item hangle" href="./japanSingleServer.html">일본 단독 서버</a></li>
-											</ul>
-										</div>
-										<div>
-											<h6 class="dropdown-header">Network</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="/product/dia">우회 방어 회선 연동</a></li>
-											</ul>
-										</div>
-										<div>
-											<h6 class="dropdown-header">Datacenter</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="#">코로케이션</a></li>
-												<li><a class="dropdown-item hangle" href="#">클라우드플레어 스펙트럼</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link hangle" href="/network">네트워크</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">데이터센터</a>
-								<ul class="dropdown-menu">
-									<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">대한민국</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item" href="#">KT Clean-Zone</a></li>
-										<li class="nav-item"><a class="dropdown-item" href="#">SK Clean-Zone</a></li>
-										<li class="nav-item"><a class="dropdown-item" href="#">Kinx Clean-Zone</a></li>
-									</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">일본</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="dropdown-item" href="#">Tokyo-IDC</a></li>
-								</ul>
-								</li>
-								<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">미국</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item" href="#">Cludflare 대한민국 리전</a></li>
-									</ul>
-								</li>
-							</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">고객지원·FAQ</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item hangle" href="/contact">연락처</a></li>
-										<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">법률</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item"><a class="dropdown-item hangle" href="/legal/term">서비스 이용약관</a></li>
-											<li class="nav-item"><a class="dropdown-item hangle" href="/legal/privacy">개인정보 처리방침</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<!-- /.navbar-nav -->
-						<div class="offcanvas-footer d-lg-none">
-							<div>
-								<a href="mailto:tech@Seal.Shield" class="link-inverse">tech@Seal.Shield</a>
-								<br /> +82-70-70-7912-3308<br />
-							</div>
-						</div>
-						<!-- /.offcanvas-footer -->
-					</div>
-					<!-- /.offcanvas-body -->
-				</div>
-				<!-- /.navbar-collapse -->
-				<div class="navbar-other ms-lg-4">
-					<ul class="navbar-nav flex-row align-items-center ms-auto">
-						<li class="nav-item d-none d-md-block">
-							<a href="/contact" class="btn btn-sm btn-white rounded-pill hangle">영업 문의</a>
-						</li>
-						<li class="nav-item d-lg-none">
-							<button class="hamburger offcanvas-nav-btn"><span></span></button>
-						</li>
-					</ul>
-					<!-- /.navbar-nav -->
-				</div>
-				<!-- /.navbar-other -->
-			</div>
-			<!-- /.container -->
-		</nav>
-		<!-- /.navbar -->
-	</header>
-	<!-- /header -->
-	
+    <script type="text/javascript">
+        (function (XHR) {
+            var open = XHR.prototype.open;
+            var send = XHR.prototype.send;
+            var parser = document.createElement('a');
+            XHR.prototype.open = function (method, url, async, user, pass) {
+                if (typeof async =='undefined') {
+                    async = true;
+                }
+                parser.href = url;
+                if (parser.host == '') {
+                    parser.href = parser.href;
+                }
+                this.ajax_hostname = parser.hostname;
+                open.call(this, method, url, async, user, pass);
+            };
+            XHR.prototype.send = function (data) {
+                if (location.hostname == this.ajax_hostname) this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");
+                send.call(this, data);
+            }
+        })(XMLHttpRequest);
+        if (typeof (fetch) != "undefined") {
+            var nsbbfetch = fetch;
+            fetch = function (url, init) {
+                if (typeof (url) === "object" && typeof (url.url) === "string") {
+                    init = {
+                        method: url.method,
+                        mode: url.mode,
+                        cache: url.cache,
+                        credentials: url.credentials,
+                        headers: url.headers,
+                        body: url.body
+                    };
+                    url = url.url;
+                }
 
+                function sbbSd(url, domain) {
+                    var parser = document.createElement('a');
+                    parser.href = url;
+                    if (parser.host == '') {
+                        parser.href = parser.href;
+                    }
+                    return parser.hostname == location.hostname;
+                }
+                if (sbbSd(url, document.domain)) {
+                    init = typeof init !== 'undefined' ? init : {};
+                    if (typeof (init.headers) === "undefined") {
+                        init.headers = {};
+                    }
+                    init.headers['X-MOD-SBB-CTYPE'] = 'fetch';
+                }
+                return nsbbfetch(url, init);
+            };
+        }
 
+        function sbbgc(check_name) {
+            var start = document.cookie.indexOf(check_name + "=");
+            var oVal = '';
+            var len = start + check_name.length + 1;
+            if ((!start) && (document.cookie.substring(0, check_name.length) != check_name)) {
+                oVal = '';
+            } else if (start == -1) {
+                oVal = '';
+            } else {
+                var end = document.cookie.indexOf(';', len);
+                if (end == -1) end = document.cookie.length;
+                var oVal = document.cookie.substring(len, end);
+            };
+            return oVal;
+        }
 
+        function addmg(inm, ext) {
+            var primgobj = document.createElement('IMG');
+            primgobj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port && window
+                .location.port != 80 ? ':' + window.location.port : '') + "/sbbi/?sbbpg=" + inm + (ext ? "&" + ext :
+                "");
+            var sbbDiv = document.getElementById('sbbfrcc');
+            sbbDiv.appendChild(primgobj);
+        };
 
+        function addprid(prid) {
+            var oldVal = sbbgc("PRLST");
+            if ((oldVal.indexOf(prid) == -1) && (oldVal.split('/').length < 5)) {
+                if (oldVal != '') {
+                    oldVal += '/';
+                }
+                document.cookie = 'PRLST=' + oldVal + escape(prid) + ';path=/; SameSite=Lax;';
+            }
+        }
+        var sbbeccf = function () {
+            this.sp3 = "jass";
+            this.sf1 = function (vd) {
+                return sf2(vd) + 32;
+            };
+            var sf2 = function (avd) {
+                return avd * 12;
+            };
+            this.sf4 = function (yavd) {
+                return yavd + 2;
+            };
+            var strrp = function (str, key, value) {
+                if (str.indexOf('&' + key + '=') > -1 || str.indexOf(key + '=') == 0) {
+                    var idx = str.indexOf('&' + key + '=');
+                    if (idx == -1) idx = str.indexOf(key + '=');
+                    var end = str.indexOf('&', idx + 1);
+                    var newstr;
+                    if (end != -1) newstr = str.substr(0, idx) + str.substr(end + (idx ? 0 : 1)) + '&' + key +
+                        '=' + value;
+                    else newstr = str.substr(0, idx) + '&' + key + '=' + value;
+                    return newstr;
+                } else return str + '&' + key + '=' + value;
+            };
+            var strgt = function (name, text) {
+                if (typeof text != 'string') return "";
+                var nameEQ = name + "=";
+                var ca = text.split(/[;&]/);
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return "";
+            };
+            this.sfecgs = {
+                sbbgh: function () {
+                    var domain = document.location.host;
+                    if (domain.indexOf('www.') == 0) domain = domain.replace('www.', '');
+                    return domain;
+                },
+                f: function (name, value) {
+                    var fv = "";
+                    if (window.globalStorage) {
+                        var host = this.sbbgh();
+                        try {
+                            if (typeof (value) != "undefined") globalStorage[host][name] = value;
+                            else {
+                                fv = globalStorage[host][name];
+                                if (typeof (fv.toString) != "undefined") fv = fv.toString();
+                            }
+                        } catch (e) {}
+                    }
+                    return fv;
+                },
+                name: "sbbrf"
+            };
+            this.sfecls = {
+                f: function (name, value) {
+                    var fv = "";
+                    try {
+                        if (window.localStorage) {
+                            if (typeof (value) != "undefined") localStorage.setItem(name, value);
+                            else {
+                                fv = localStorage.getItem(name);
+                                if (typeof (fv.toString) != "undefined") fv = fv.toString();
+                            }
+                        }
+                    } catch (e) {}
+                    return fv;
+                },
+                name: "sbbrf"
+            };
+            this.sbbcv = function (invl) {
+                try {
+                    var invalArr = invl.split("-");
+                    if (invalArr.length > 1) {
+                        if (invalArr[0] == "A" || invalArr[0] == "D") {
+                            invl = invalArr[1];
+                        } else invl = "";
+                    }
+                    if (invl == null || typeof (invl) == "undefined" || invl == "falseImgUT" || invl ==
+                        "undefined" || invl == "null" || invl != encodeURI(invl)) invl = "";
+                    if (typeof (invl).toLowerCase() == "string")
+                        if (invl.length > 20)
+                            if (invl.substr(0, 2) != "h4") invl = "";
+                } catch (ex) {
+                    invl = "";
+                }
+                return invl;
+            };
+            this.sbbsv = function (fv) {
+                for (var elm in this) {
+                    if (this[elm].name == "sbbrf") {
+                        this[elm].f("altutgv2", fv);
+                    }
+                }
+                document.cookie = "UTGv2=" + fv + ';expires=Tue, 16-Apr-24 06:05:14 GMT;path=/; SameSite=Lax;';
+            };
+            this.sbbgv = function () {
+                var valArr = Array();
+                var currVal = "";
+                for (var elm in this) {
+                    if (this[elm].name == "sbbrf") {
+                        currVal = this[elm].f("altutgv2");
+                        currVal = this.sbbcv(currVal);
+                        if (currVal != "") valArr[currVal] = (typeof (valArr[currVal]) != "undefined" ? valArr[
+                            currVal] + 1 : 1);
+                    }
+                }
+                var lb = 0;
+                var fv = "";
+                for (var val in valArr) {
+                    if (valArr[val] > lb) {
+                        fv = val;
+                        lb = valArr[val]
+                    }
+                }
+                if (fv == "") fv = sbbgc("UTGv2");
+                fv = this.sbbcv(fv);
+                if (fv != "") this.sbbsv(fv);
+                else this.sbbsv("h400ca4bf3c9b5b07fb9dda92ae900127348");
+                return fv;
+            };
+        };
 
-	<section class="wrapper bg-soft-primary position-relative">
-        <div class="container pt-10 pb-17 pt-md-14 text-center">
-          <div class="row">
-            <div class="col-lg-8 mx-auto mb-5">
-              <h1 class="fs-15 text-uppercase text-muted mb-3">Compute</h1>
-              <h3 class="display-1 mb-6">Virtual Server</h3>
-              <a href="#pricing" class="btn btn-lg btn-primary rounded-pill hangle">요금 확인하기</a>
-            </div>
-            <!-- /column -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-        <div class="overflow-hidden">
-          <div class="divider text-light mx-n2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
-              <path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z" />
-            </svg>
-          </div>
-        </div>
-      </section>
-      <!-- /section -->
-      <section class="wrapper bg-light">
-        <div class="container pb-15 pb-md-5">
-          <div class="row gx-md-5 gy-5 mt-n18 mt-md-n19">
-            <div class="col-md-6 col-xl-3">
-              <div class="card lift">
-                <div class="card-body hangle">
-                  <img src="/static/img/icons/lineal/shield.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
-                  <h4 class="hangle">디도스 공격 방어</h4>
-                  <p class="mb-0 hangle">AnyCast를 통해 대용량 및 정교한 공격에 대한 원활한 방어를 제공합니다. 클라우드 서버 상품에는 디도스 보안 서비스가 기본 포함되어 있습니다.</p>
+        function m2vr(m1, m2) {
+            var i = 0;
+            var rc = "";
+            var est = "ghijklmnopqrstuvwyz";
+            var rnum;
+            var rpl;
+            var charm1 = m1.charAt(i);
+            var charm2 = m2.charAt(i);
+            while (charm1 != "" || charm2 != "") {
+                rnum = Math.floor(Math.random() * est.length);
+                rpl = est.substring(rnum, rnum + 1);
+                rc += (charm1 == "" ? rpl : charm1) + (charm2 == "" ? rpl : charm2);
+                i++;
+                charm1 = m1.charAt(i);
+                charm2 = m2.charAt(i);
+            }
+            return rc;
+        }
+
+        function sbbls(prid) {
+            try {
+                var eut = sbbgc("UTGv2");
+                window.sbbeccfi = new sbbeccf();
+                window.sbbgs = sbbeccfi.sbbgv();
+                if (eut != sbbgs && sbbgs != "" && typeof (sbbfcr) == "undefined") {
+                    addmg('utMedia', "vii=" + m2vr("105ef889c9e85e5e39eedaf09d786b47", sbbgs));
+                }
+                var sbbiframeObj = document.createElement('IFRAME');
+                var dfx = new Date();
+                sbbiframeObj.id = 'SBBCrossIframe';
+                sbbiframeObj.title = 'SBBCrossIframe';
+                sbbiframeObj.tabindex = '-1';
+                sbbiframeObj.lang = 'en';
+                sbbiframeObj.style.visibility = 'hidden';
+                sbbiframeObj.setAttribute('aria-hidden', 'true');
+                sbbiframeObj.style.border = '0px';
+                if (document.all) {
+                    sbbiframeObj.style.position = 'absolute';
+                    sbbiframeObj.style.top = '-1px';
+                    sbbiframeObj.style.height = '1px';
+                    sbbiframeObj.style.width = '28px';
+                } else {
+                    sbbiframeObj.style.height = '1px';
+                    sbbiframeObj.style.width = '0px';
+                }
+                sbbiframeObj.scrolling = "NO";
+                sbbiframeObj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port &&
+                        window.location.port != 80 ? ':' + window.location.port : '') + '/sbbi/?sbbpg=sbbShell&gprid=' +
+                    prid + '';
+                var sbbDiv = document.getElementById('sbbfrcc');
+                sbbDiv.appendChild(sbbiframeObj);
+            } catch (ex) {
+                ;
+            }
+        }
+        try {
+            var y = unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+            document.getElementById('sbbhscc').innerHTML = y;
+            var x = unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+        } catch (e) {
+            x = 'function genPid(){return "jser";}';
+        }
+        try {
+            if (window.gprid == undefined) document.write('<' + 'script type="text/javascri' + 'pt">' + x +
+                "var gprid=genPid();addprid(gprid);var sbbfcr=true;sbbls(gprid);<" + "/script>");
+        } catch (e) {
+            addprid("dwer");
+        }
+    </script>
+    <div class="content-wrapper">
+        <header class="wrapper bg-soft-primary">
+            <nav class="navbar navbar-expand-lg classic transparent navbar-light">
+                <div class="container flex-lg-row flex-nowrap align-items-center">
+                    <div class="navbar-brand w-100">
+                        <a href="./index.html">
+                            <h2 class="logo-dark"
+                                style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield
+                                <d style="color: #27cf7b;">.</d>
+                            </h2>
+                            <h2 class="logo-light"
+                                style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield
+                                <d style="color: #27cf7b;">.</d>
+                            </h2>
+                        </a>
+                    </div>
+                    <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                        <div class="offcanvas-header d-lg-none">
+                            <h3 class="text-white fs-30 mb-0">Seal Shield</h3>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown dropdown-mega">
+                                    <a class="nav-link hangle" href="./index.html">홈</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">디도스
+                                        보안존 상품</a>
+                                    <div class="dropdown-menu dropdown-lg">
+                                        <div class="dropdown-lg-content">
+                                            <div>
+                                                <h6 class="dropdown-header">Compute</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item hangle" href="./virtualServer.html">가상
+                                                            서버</a></li>
+                                                    <li><a class="dropdown-item hangle" href="./dedicatedServer.html">단독
+                                                            서버</a></li>
+                                                    <li><a class="dropdown-item hangle"
+                                                            href="./japanDedicatedServer.html">일본 단독 서버</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h6 class="dropdown-header">Network</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item hangle" href="./bypassDefense.html">우회 방어 회선
+                                                            연동</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h6 class="dropdown-header">Datacenter</h6>
+                                                <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item hangle" href="#">코로케이션</a></li>
+                                                    <li><a class="dropdown-item hangle" href="#">클라우드플레어 스펙트럼</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link hangle" href="./network.html">네트워크</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle hangle" href="#"
+                                        data-bs-toggle="dropdown">데이터센터</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown dropdown-submenu dropend"><a
+                                                class="dropdown-item dropdown-toggle hangle" href="#"
+                                                data-bs-toggle="dropdown">대한민국</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="#">KT Clean-Zone</a>
+                                                </li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">SK Clean-Zone</a>
+                                                </li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">Kinx
+                                                        Clean-Zone</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu dropend"><a
+                                                class="dropdown-item dropdown-toggle hangle" href="#"
+                                                data-bs-toggle="dropdown">일본</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="#">Tokyo-IDC</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu dropend"><a
+                                                class="dropdown-item dropdown-toggle hangle" href="#"
+                                                data-bs-toggle="dropdown">미국</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="#">Cloudflare 대한민국
+                                                        리전</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle hangle" href="#"
+                                        data-bs-toggle="dropdown">고객지원·FAQ</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="dropdown-item hangle" href="./contact.html">연락처</a>
+                                        </li>
+                                        <li class="dropdown dropdown-submenu dropend"><a
+                                                class="dropdown-item dropdown-toggle hangle" href="#"
+                                                data-bs-toggle="dropdown">법률</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item hangle"
+                                                        href="./term.html">서비스 이용약관</a></li>
+                                                <li class="nav-item"><a class="dropdown-item hangle"
+                                                        href="./privacy.html">개인정보 처리방침</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- /.navbar-nav -->
+                            <div class="offcanvas-footer d-lg-none">
+                                <div>
+                                    <a href="mailto:tech@Seal.Shield" class="link-inverse">tech@Seal.Shield</a>
+                                    <br /> +82-70-70-7912-3308<br />
+                                </div>
+                            </div>
+                            <!-- /.offcanvas-footer -->
+                        </div>
+                        <!-- /.offcanvas-body -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+                    <div class="navbar-other ms-lg-4">
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <li class="nav-item d-none d-md-block">
+                                <a href="./contact.html" class="btn btn-sm btn-primary rounded-pill hangle">영업 문의</a>
+                            </li>
+                            <li class="nav-item d-lg-none">
+                                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                            </li>
+                        </ul>
+                        <!-- /.navbar-nav -->
+                    </div>
+                    <!-- /.navbar-other -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.card -->
-            </div>
-            <!--/column -->
-            <div class="col-md-6 col-xl-3">
-              <div class="card lift">
-                <div class="card-body hangle">
-                  <img src="/static/img/icons/lineal/levels.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
-                  <h4 class="hangle">고성능 I/O</h4>
-                  <p class="mb-0 hangle">Intel 서버용 Xeon 계열 CPU와 SSD가 장착된 가상 서버를 제공하고 있으며 게임 서버 및 DB 서버 등 다양한 분야에 활용이 가능합니다.</p>
+                <!-- /.container -->
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
+
+
+
+
+
+
+        <section class="wrapper bg-soft-primary position-relative">
+            <div class="container pt-10 pb-17 pt-md-14 text-center">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto mb-5">
+                        <h1 class="fs-15 text-uppercase text-muted mb-3">Compute</h1>
+                        <h3 class="display-1 mb-6">Virtual Server</h3>
+                        <a href="#pricing" class="btn btn-lg btn-primary rounded-pill hangle">요금 확인하기</a>
+                    </div>
+                    <!-- /column -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.card -->
+                <!-- /.row -->
             </div>
-            <!--/column -->
-            <div class="col-md-6 col-xl-3">
-              <div class="card lift">
-                <div class="card-body hangle">
-                  <img src="/static/img/icons/lineal/web.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
-                  <h4 class="hangle">고 대역폭 회선</h4>
-                  <p class="mb-0 hangle">고 대역폭 업링크 회선을 전문적으로 제공하고 있습니다. 제공되는 서버는 1G에서 최대 40G 업링크(on-request)를 지원하고 있습니다.</p>
+            <!-- /.container -->
+            <div class="overflow-hidden">
+                <div class="divider text-light mx-n2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
+                        <path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z" />
+                    </svg>
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.card -->
             </div>
-            <!--/column -->
-            <div class="col-md-6 col-xl-3">
-              <div class="card lift">
-                <div class="card-body hangle">
-                  <img src="/static/img/icons/lineal/headphone.svg" class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3" alt="" />
-                  <h4 class="hangle">8x5 업무 지원</h4>
-                  <p class="mb-0 hangle">홈페이지 내 실시간 채팅(채널 톡), 카카오톡 플러스 친구 또는 이메일을 통해서 영업 또는 기술 관련 업무 지원을 받으실 수 있습니다.</p><br>
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-light">
+            <div class="container pb-15 pb-md-5">
+                <div class="row gx-md-5 gy-5 mt-n18 mt-md-n19">
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card lift">
+                            <div class="card-body hangle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.8 409.6"
+                                    class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3">
+                                    <path class="lineal-stroke"
+                                        d="M169.9 409.6c-5.5 0-10.9-1.2-15.8-3.5C107.8 384.8 0 327.5 0 255.5V72.1c0-10.7 8.7-19.4 19.4-19.5 2.1 0 4.2.3 6.1 1 9.2 3.1 18.9 4.7 28.6 4.6 31.5.1 60.7-16.3 76.9-43.3C136.6 5.7 146.6 0 157.4 0h25c10.8.1 20.8 5.7 26.4 14.9 16.2 27 45.4 43.4 76.9 43.3 9.7 0 19.4-1.6 28.6-4.6 10.2-3.4 21.2 2.1 24.6 12.3.7 2 1 4.1 1 6.1v48c0 6.5-5.3 11.8-11.7 11.8-6.5 0-11.8-5.3-11.8-11.7V77.6c-10 2.8-20.3 4.2-30.6 4.2-39.7.2-76.5-20.6-97-54.6-1.3-2.2-3.7-3.6-6.3-3.6h-25c-2.6 0-5 1.4-6.3 3.6-20.5 34-57.3 54.8-97 54.6-10.3 0-20.6-1.4-30.6-4.2v178c0 47.7 72.5 98 140.4 129.3 3.8 1.7 8.2 1.7 12 0 67.9-31.3 140.4-81.6 140.4-129.3v-74.9c0-6.5 5.3-11.8 11.8-11.7 6.5 0 11.7 5.3 11.7 11.7v74.9c0 72-107.8 129.3-154.1 150.6-5 2.2-10.4 3.4-15.9 3.4z" />
+                                    <path class="lineal-fill"
+                                        d="M156 269l-62.2-31.1c-11.8-5.9-16.6-20.2-10.7-32 5.9-11.8 20.2-16.6 32-10.7l44.9 22.5 56.6-70.7c8.2-10.3 23.2-12 33.5-3.7 10.3 8.2 12 23.2 3.7 33.5l-68.6 85.8c-6.9 8.8-19.1 11.5-29.2 6.4z" />
+                                    <path class="lineal-stroke"
+                                        d="M166.7 283.3c-5.5 0-11-1.3-15.9-3.8l-62.2-31.1c-17.6-8.8-24.7-30.2-15.9-47.8s30.2-24.7 47.8-15.9l36.4 18.2 50.6-63.3c12.3-15.4 34.7-17.9 50.1-5.6 15.4 12.3 17.9 34.7 5.6 50.1l-68.6 85.8c-6.8 8.5-17.1 13.4-27.9 13.4zm-62.2-78.8c-6.7 0-12.1 5.4-12.1 12.1 0 4.6 2.6 8.8 6.7 10.8l62.2 31.1c5.1 2.6 11.3 1.2 14.9-3.3l68.6-85.8c4.3-5.1 3.7-12.8-1.4-17.1-5.1-4.3-12.8-3.7-17.1 1.4-.1.2-.3.3-.4.5l-56.6 70.7c-3.5 4.3-9.5 5.6-14.4 3.2L110 205.6c-1.7-.7-3.6-1.1-5.5-1.1z" />
+                                </svg>
+                                <h4 class="hangle">디도스 공격 방어</h4>
+                                <p class="mb-0 hangle">Cloudflare Enterprise Spectrum AnyCast 기반 204Tbps+ 방어서비스를 제공합니다.
+                                </p>
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card lift">
+                            <div class="card-body hangle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 492.45"
+                                    class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3">
+                                    <path class="lineal-stroke"
+                                        d="M80.52 492.45a15.19 15.19 0 01-15.19-15.19v-256a15.2 15.2 0 1130.39 0v256a15.2 15.2 0 01-15.2 15.19zm0-355.52a15.19 15.19 0 01-15.19-15.19V80.53a15.2 15.2 0 0130.39 0v41.21a15.2 15.2 0 01-15.2 15.19zM256 492.45a15.19 15.19 0 01-15.19-15.19v-94.19a15.19 15.19 0 1130.38 0v94.19A15.19 15.19 0 01256 492.45zm0-297.78a15.2 15.2 0 01-15.19-15.2V15.19a15.19 15.19 0 0130.38 0v164.29A15.19 15.19 0 01256 194.67zm175.48 297.78a15.2 15.2 0 01-15.2-15.19V263.79a15.2 15.2 0 0130.39 0v213.47a15.19 15.19 0 01-15.19 15.19zm0-350.96a15.2 15.2 0 01-15.2-15.19V15.19a15.2 15.2 0 0130.39 0V126.3a15.19 15.19 0 01-15.19 15.19z" />
+                                    <circle class="lineal-fill" cx="80.52" cy="80.53" r="65.33" />
+                                    <path class="lineal-stroke"
+                                        d="M80.52 161.05a80.52 80.52 0 1180.53-80.52 80.61 80.61 0 01-80.53 80.52zm0-130.66a50.14 50.14 0 1050.14 50.14 50.19 50.19 0 00-50.14-50.14zM256 398.26a80.48 80.48 0 1170.54-41.66 15.19 15.19 0 11-26.6-14.68A50.15 50.15 0 10256 367.87a15.2 15.2 0 010 30.39z" />
+                                    <circle class="lineal-fill" cx="431.48" cy="126.29" r="65.33" />
+                                    <path class="lineal-stroke"
+                                        d="M431.48 206.82A80.52 80.52 0 11512 126.3a80.62 80.62 0 01-80.52 80.52zm0-130.66a50.14 50.14 0 1050.13 50.14 50.19 50.19 0 00-50.13-50.14z" />
+                                </svg>
+                                <h4 class="hangle">고성능 I/O</h4>
+                                <p class="mb-0 hangle">Intel 서버용 Xeon 계열 CPU와 SSD가 장착된 가상 서버를 제공하고 있으며 게임 서버 및 DB 서버 등
+                                    다양한 분야에 활용이 가능합니다.</p>
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card lift">
+                            <div class="card-body hangle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.6 325.5"
+                                    class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3">
+                                    <path class="lineal-stroke"
+                                        d="M371.7 249v-59.6c0-27.8-22.6-50.4-50.4-50.4H215.5V97.2h10c15.4 0 27.9-12.5 27.9-27.9V27.9c0-15.4-12.5-27.9-27.9-27.9h-41.3c-15.4 0-27.9 12.5-27.9 27.9v41.3c0 15.4 12.5 27.9 27.9 27.9h10V139H88.3c-27.8 0-50.3 22.6-50.4 50.4V258h21.4v-68.6c0-16 13-29 29-29h105.8v88.7h21.4v-88.7h105.8c16 0 29 13 29 29V249h21.4zM177.6 69.3V27.9c0-3.6 2.9-6.5 6.5-6.5h41.3c3.6 0 6.5 2.9 6.5 6.5v41.3c0 3.6-2.9 6.5-6.5 6.5h-41.3c-3.6.1-6.5-2.8-6.5-6.4z" />
+                                    <path class="lineal-fill"
+                                        d="M69.3 314.8H27.9c-9.5 0-17.2-7.7-17.2-17.2v-41.4c0-9.5 7.7-17.2 17.2-17.2h41.3c9.5 0 17.2 7.7 17.2 17.2v41.4c.1 9.5-7.6 17.2-17.1 17.2z" />
+                                    <path class="lineal-stroke"
+                                        d="M69.3 325.5H27.9C12.5 325.5 0 313 0 297.6v-41.4c0-15.4 12.5-27.9 27.9-27.9h41.3c15.4 0 27.9 12.5 27.9 27.9v41.4c.1 15.4-12.4 27.9-27.8 27.9zm-41.4-75.8c-3.6 0-6.5 2.9-6.5 6.5v41.4c0 3.6 2.9 6.5 6.5 6.5h41.3c3.6 0 6.5-2.9 6.5-6.5v-41.4c0-3.6-2.9-6.5-6.5-6.5H27.9z" />
+                                    <path class="lineal-fill"
+                                        d="M225.5 314.8h-41.3c-9.5 0-17.2-7.7-17.2-17.2v-41.4c0-9.5 7.7-17.2 17.2-17.2h41.3c9.5 0 17.2 7.7 17.2 17.2v41.4c0 9.5-7.7 17.2-17.2 17.2z" />
+                                    <path class="lineal-stroke"
+                                        d="M225.5 325.5h-41.3c-15.4 0-27.9-12.5-27.9-27.9v-41.4c0-15.4 12.5-27.9 27.9-27.9h41.3c15.4 0 27.9 12.5 27.9 27.9v41.4c0 15.4-12.5 27.9-27.9 27.9zm-41.4-75.8c-3.6 0-6.5 2.9-6.5 6.5v41.4c0 3.6 2.9 6.5 6.5 6.5h41.3c3.6 0 6.5-2.9 6.5-6.5v-41.4c0-3.6-2.9-6.5-6.5-6.5h-41.3z" />
+                                    <path class="lineal-fill"
+                                        d="M381.7 314.8h-41.3c-9.5 0-17.2-7.7-17.2-17.2v-41.4c0-9.5 7.7-17.2 17.2-17.2h41.3c9.5 0 17.2 7.7 17.2 17.2v41.4c0 9.5-7.7 17.2-17.2 17.2z" />
+                                    <path class="lineal-stroke"
+                                        d="M381.7 325.5h-41.3c-15.4 0-27.9-12.5-27.9-27.9v-41.4c0-15.4 12.5-27.9 27.9-27.9h41.3c15.4 0 27.9 12.5 27.9 27.9v41.4c0 15.4-12.5 27.9-27.9 27.9zm-41.4-75.8c-3.6 0-6.5 2.9-6.5 6.5v41.4c0 3.6 2.9 6.5 6.5 6.5h41.3c3.6 0 6.5-2.9 6.5-6.5v-41.4c0-3.6-2.9-6.5-6.5-6.5h-41.3z" />
+                                </svg>
+                                <h4 class="hangle">고 대역폭 회선</h4>
+                                <p class="mb-0 hangle">고 대역폭 업링크 회선을 전문적으로 제공하고 있습니다. 제공되는 서버는 1G에서 최대 40G
+                                    업링크(on-request)를 지원하고 있습니다.</p>
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card lift">
+                            <div class="card-body hangle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.6 385.6"
+                                    class="svg-inject icon-svg icon-svg-sm solid-mono text-primary mb-3">
+                                    <path class="lineal-stroke"
+                                        d="M204.8 363.2c-6.4-.4-11.2-5.8-10.8-12.2.3-5.8 5-10.5 10.8-10.8 36.3 0 71-14.5 96.5-40.3 4.5-4.5 11.8-4.5 16.3 0s4.5 11.8 0 16.3c-29.7 30.1-70.4 47.1-112.8 47zm147.7-147.7c-6.3 0-11.5-5.1-11.5-11.5v-44.8C341 84.1 279.9 23 204.8 23S68.6 84.1 68.6 159.2c-.4 6.4-5.8 11.2-12.2 10.8-5.8-.3-10.5-5-10.8-10.8C45.6 71.4 117 0 204.8 0S364 71.4 364 159.2V204c0 6.4-5.2 11.5-11.5 11.5z" />
+                                    <path class="lineal-fill"
+                                        d="M213.5 374h-17.4c-12.2 0-22.1-9.9-22.1-22.1 0-12.2 9.9-22 22.1-22.1h17.4c12.2 0 22.1 9.9 22.1 22.1s-9.9 22.1-22.1 22.1z" />
+                                    <path class="lineal-stroke"
+                                        d="M213.5 385.6h-17.4c-18.5 0-33.6-15-33.6-33.6 0-18.5 15-33.6 33.6-33.6h17.4c18.5 0 33.6 15 33.6 33.6 0 18.5-15.1 33.6-33.6 33.6zm-17.4-44.1c-5.8 0-10.5 4.7-10.6 10.5 0 5.8 4.7 10.5 10.5 10.6h17.4c5.8 0 10.5-4.7 10.6-10.5 0-5.8-4.7-10.5-10.5-10.6h-17.4z" />
+                                    <path class="lineal-fill"
+                                        d="M76.3 242.9h-35c-16.5 0-29.8-13.4-29.8-29.8v-33.2c0-16.5 13.4-29.8 29.8-29.8h35v92.8z" />
+                                    <path class="lineal-stroke"
+                                        d="M76.3 254.4h-35C18.5 254.4 0 235.9 0 213.1v-33.2c0-22.8 18.5-41.3 41.3-41.3h35c6.4 0 11.5 5.2 11.5 11.5v92.8c.1 6.3-5.1 11.5-11.5 11.5zm-35-92.8c-10.1 0-18.3 8.2-18.3 18.3V213c0 10.1 8.2 18.3 18.3 18.3h23.5v-69.8l-23.5.1z" />
+                                    <path class="lineal-fill"
+                                        d="M82.7 257.8c-13.3 0-24.1-10.8-24.1-24.1v-74.4c0-13.3 10.8-24.1 24.1-24.1s24.1 10.8 24.1 24.1v74.4c0 13.3-10.8 24.1-24.1 24.1z" />
+                                    <path class="lineal-stroke"
+                                        d="M82.7 269.3c-19.7 0-35.6-16-35.7-35.6v-74.4c-.3-19.7 15.4-35.9 35-36.2s35.9 15.4 36.2 35v75.6c.1 19.7-15.9 35.6-35.5 35.6zm0-122.7c-7 0-12.6 5.7-12.6 12.6v74.4c0 7 5.6 12.6 12.6 12.6s12.6-5.6 12.6-12.6v-74.4c0-6.9-5.7-12.5-12.6-12.6z" />
+                                    <path class="lineal-fill"
+                                        d="M333.2 242.9h35c16.5 0 29.8-13.4 29.8-29.8v-33.2c0-16.5-13.4-29.8-29.8-29.8h-35v92.8z" />
+                                    <path class="lineal-stroke"
+                                        d="M368.3 254.4h-35c-6.4 0-11.5-5.2-11.5-11.5v-92.8c0-6.4 5.2-11.5 11.5-11.5h35c22.8 0 41.3 18.5 41.3 41.3V213c0 22.9-18.5 41.4-41.3 41.4zm-23.5-23h23.5c10.1 0 18.3-8.2 18.3-18.3v-33.2c0-10.1-8.2-18.3-18.3-18.3h-23.5v69.8z" />
+                                    <path class="lineal-fill"
+                                        d="M326.9 257.8c13.3 0 24.1-10.8 24.1-24.1v-74.4c0-13.3-10.8-24.1-24.1-24.1s-24.1 10.8-24.1 24.1v74.4c0 13.3 10.8 24.1 24.1 24.1z" />
+                                    <path class="lineal-stroke"
+                                        d="M326.9 269.3c-19.7 0-35.6-16-35.6-35.6v-74.4c0-19.7 16-35.6 35.6-35.6 19.7 0 35.6 16 35.6 35.6v74.4c0 19.7-15.9 35.6-35.6 35.6zm0-122.7c-7 0-12.6 5.7-12.6 12.6v74.4c0 7 5.6 12.6 12.6 12.6s12.6-5.6 12.6-12.6v-74.4c0-6.9-5.6-12.5-12.6-12.6z" />
+                                </svg>
+                                <h4 class="hangle">8x5 업무 지원</h4>
+                                <p class="mb-0 hangle">홈페이지 내 실시간 채팅(채널 톡), 카카오톡 플러스 친구 또는 텔레그램을 통해서 영업 또는 기술 관련 업무 지원을
+                                    받으실 수 있습니다.</p><br>
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!--/.card -->
+                    </div>
+                    <!--/column -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.card -->
+                <!--/.row -->
             </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-      <section class="wrapper bg-light wrapper-border">
-        <div class="container pt-10 pt-md-10">
-          <div class="row gx-3 gy-10 mb-15 mb-md-18 align-items-center">
-            <div class="col-lg-6 ppr-3">
-              <h3 class="display-4 mb-4">Network ready for any load</h3>
-              <p class="mb-6 hangle">CloudNX의 네트워크 인프라는 대량 트래픽을 처리하도록 설계되었습니다. Korea Telecom, SK Broadband, LG Dacom, KINX, PCCW, China Mobile, Cloudflare와 같은 대형 통신사와 연결되어 피크 시간 및 DDoS 공격에도 안정적인 네트워크 품질을 제공합니다.</p>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section class="wrapper bg-light wrapper-border">
+            <div class="container pt-10 pt-md-10">
+                <div class="row gx-3 gy-10 mb-15 mb-md-18 align-items-center">
+                    <div class="col-lg-6 ppr-3">
+                        <h3 class="display-4 mb-4">Network ready for any load</h3>
+                        <p class="mb-6 hangle">Seal Shield의 네트워크 인프라는 대량 트래픽을 처리하도록 설계되었습니다. Korea Telecom, SK
+                            Broadband, LG Dacom, KINX, PCCW, China Mobile, Cloudflare와 같은 대형 통신사와 연결되어 피크 시간 및 DDoS 공격에도
+                            안정적인 네트워크 품질을 제공합니다.</p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-lg-6 ppl-3">
+                        <figure><img class="w-auto" src="./static/img/cdn/6.png" alt="" /></figure>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
+                <div class="row gx-3 gy-10 mb-10 mb-md-10 align-items-center">
+                    <div class="col-lg-6 ppr-3">
+                        <figure><img class="w-auto" src="./static/img/compute/1.png" alt="" /></figure>
+                    </div>
+                    <!--/column -->
+                    <div class="col-lg-6 ppl-3">
+                        <h3 class="display-4 mb-4">1-hour deployments</h3>
+                        <p class="mb-6 hangle">재고가 있는 모든 서버는 위치에 관계없이 1시간 이내에 프로비저닝됩니다. 주문형 커스텀 구성을 사용하는 경우 프로비저닝 시간
+                            최소화하고 프로비저닝 진행 상황에 대해 항상 최신 정보를 고객에게 제공합니다.</p>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
             </div>
-            <!--/column -->
-            <div class="col-lg-6 ppl-3">
-              <figure><img class="w-auto" src="/static/img/cdn/6.png" alt="" /></figure>
+            <!-- /.container -->
+        </section>
+        <!-- /section -->
+        <section id="pricing" class="wrapper bg-light wrapper-border">
+            <div class="container pt-13 pt-md-13 pb-13 pb-md-13">
+                <h2 class="display-4 mb-3">High Virtual Server</h2>
+                <p class="lead fs-lg hangle">코어당 3.0Ghz 이상의, 높은 연산 성능을 제공하는 High Virtual 서버입니다.</p>
+                <div class="row">
+                    <div class="hangle">
+                        <p>
+                            ■ AMD Ryzen, Intel Xeon E5-v4 계열 CPU가 제공되며, DDoS Protection이 제공됩니다.<br>
+                            ■ IPv4 1개(공인아이피 1개) 기본 제공, 디스크 추가 가능 상품
+                        </p>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="job-list mb-10">
+                            <a class="card mb-2 lift" href="/contact">
+                                <div class="card-body p-3">
+                                    <span class="row justify-content-between align-items-center">
+                                        <span
+                                            class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Hv.micro</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-processor me-1"></i> CPU 4 Core</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-film me-1"></i> RAM 8 GB</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-database-alt me-1"></i> SSD Nvme</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-exchange me-1"></i>Traffic 무제한</span>
+                                        <span
+                                            class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">200,000
+                                            / 월</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card mb-2 lift" href="/contact">
+                                <div class="card-body p-3">
+                                    <span class="row justify-content-between align-items-center">
+                                        <span
+                                            class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Hv.small</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-processor me-1"></i> CPU 6 Core</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-film me-1"></i> RAM 16 GB</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-database-alt me-1"></i> SSD Nvme</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-exchange me-1"></i>Traffic 무제한</span>
+                                        <span
+                                            class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">200,000
+                                            / 월</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card mb-2 lift" href="/contact">
+                                <div class="card-body p-3">
+                                    <span class="row justify-content-between align-items-center">
+                                        <span
+                                            class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Hv.medium</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-processor me-1"></i> CPU 8 Core</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-film me-1"></i> RAM 32 GB</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-database-alt me-1"></i> SSD Nvme</span>
+                                        <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i
+                                                class="uil uil-exchange me-1"></i>Traffic 무제한</span>
+                                        <span
+                                            class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">200,000
+                                            / 월</span>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
             </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-          <div class="row gx-3 gy-10 mb-10 mb-md-10 align-items-center">
-            <div class="col-lg-6 ppr-3">
-              <figure><img class="w-auto" src="/static/img/compute/1.png" alt="" /></figure>
-            </div>
-            <!--/column -->
-            <div class="col-lg-6 ppl-3">
-              <h3 class="display-4 mb-4">1-hour deployments</h3>
-              <p class="mb-6 hangle">재고가 있는 모든 서버는 위치에 관계없이 1시간 이내에 프로비저닝됩니다. 주문형 커스텀 구성을 사용하는 경우 프로비저닝 시간 최소화하고 프로비저닝 진행 상황에 대해 항상 최신 정보를 고객에게 제공합니다.</p>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-      <section id="pricing" class="wrapper bg-light wrapper-border">
+            <!-- /.container -->
+    </div>
+    <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section id="faq" class="wrapper bg-light wrapper-border">
         <div class="container pt-13 pt-md-13 pb-13 pb-md-13">
-          <h2 class="display-4 mb-3">Compact Plan</h2>
-          <p class="lead fs-lg hangle">개발 및 테스트 등 소규모 서비스 운영에 적합한 Compact 요금제 입니다.</p>
-          <div class="row">
-            <div class="hangle">
-              <p>
-              ■ Intel E5-v2 계열 CPU가 제공되며, DDoS Protection은 제공되지 않습니다.<br>
-              ■ IPv4 1개(공인아이피 1개) 기본 제공, 디스크 추가 불가 상품
-              </p>
-            </div>
-            <!--/column -->
-          </div>
-          <!-- /.row -->
-          <div class="row">
-            <div class="mx-auto">
-              <div class="job-list mb-10">
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Compact.micro</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 4 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 8 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 2 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">판매 중단</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Compact.small</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 6 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 12 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 2 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">판매 중단</span>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <h2 class="display-4 mb-3">Standard Plan</h2>
-          <p class="lead fs-lg hangle">다양한 워크로드에 적합한 Standard 요금제입니다.</p>
-          <div class="row">
-            <div class="hangle">
-              <p>
-              ■ Intel Xeon E5-v4, Xeon Scalable 계열 CPU가 제공되며, DDoS Protection Pro가 기본 제공됩니다.<br>
-              ■ IPv4 1개(공인아이피 1개) 기본 제공, 디스크 추가 가능 상품
-              </p>
-            </div>
-            <!--/column -->
-          </div>
-          <div class="row">
-            <div class="mx-auto">
-              <div class="job-list mb-10">
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.micro</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 2 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 6 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 4 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">100,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.small</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 4 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 8 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 8 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">160,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.medium</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 4 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 16 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 10 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">220,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.large</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 6 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 24 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 12 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">320,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.2xlarge</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 8 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 32 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 16 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">440,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.3xlarge</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 16 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 64 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 20 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">560,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">Standard.4xlarge</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 24 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 128 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 40 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">780,000원 /월</span>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- /column -->
-          </div>
-          <h2 class="display-4 mb-3">High Frequency Plan</h2>
-          <p class="lead fs-lg hangle">코어당 3.0Ghz 이상의, 높은 연산 성능을 제공하는 High Frequency 서버입니다.</p>
-          <div class="row">
-            <div class="hangle">
-              <p>
-              ■ AMD Ryzen, ThreadRipper 계열 CPU가 제공되며, DDoS Protection Pro가 기본 제공됩니다.<br>
-              ■ IPv4 1개(공인아이피 1개) 기본 제공, 디스크 추가 가능 상품
-              </p>
-            </div>
-            <!--/column -->
-          </div>
-          <!-- /.row -->
-          <div class="row">
-            <div class="mx-auto">
-              <div class="job-list mb-10">
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">hf.micro</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 4 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 8 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 100 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 10 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">준비중</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">hf.small</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 6 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 16 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 150 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 15 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">준비중</span>
-                    </span>
-                  </div>
-                </a>
-                <a class="card mb-2 lift" href="/contact">
-                  <div class="card-body p-3">
-                    <span class="row justify-content-between align-items-center">
-                      <span class="col-8 col-sm-8 col-lg-2 mb-3 mb-md-0 d-flex align-items-center text-body">hf.medium</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-processor me-1"></i> CPU 8 Core</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-film me-1"></i> RAM 32 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-database-alt me-1"></i> SSD 200 GB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-body d-flex align-items-center"><i class="uil uil-exchange me-1"></i>Traffic 20 TB</span>
-                      <span class="col-6 col-sm-6 col-lg-2 text-primary d-flex align-items-center">준비중</span>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <!-- /section -->
-      <section id="faq" class="wrapper bg-light wrapper-border">
-        <div class="container pt-13 pt-md-13 pb-13 pb-md-13">
-          <h2 class="display-4 mb-3">Frequently Asked Questions</h2>
-          <p class="lead mb-5 hangle">궁금하신 사항을 찾지 못한 경우 아래 버튼을 통해 CloudNX로 문의하실 수 있습니다.</p>
-          <a href="/contact" class="btn btn-primary rounded-pill me-2" target="_blank">연락하기</a>
-          <a href="http://pf.kakao.com/_NNxbcj/chat" class="btn btn-soft-primary rounded-pill" target="_blank">1:1 상담 센터</a>
-          <div class="accordion accordion-wrapper mt-10" id="accordion">
-            <div class="card accordion-item">
-              <div class="card-header" id="faq-0">
-                <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-0" aria-expanded="true" aria-controls="faq-collapse-0"> 클라우드 서버에는 어떤 CPU가 제공되나요? </button>
-              </div>
-              <!--/.card-header -->
-              <div id="faq-collapse-0" class="accordion-collapse collapse" aria-labelledby="faq-0">
-                <div class="card-body hangle">
-                  <p>요금제 별로 다양한 클러스터를 운영하고 있으며, 부하량과 서버 디플로이 시점에 따라 제공되는 CPU가 상이할 수 있습니다.</p>
-                  <h5>Compact</h5>
-                  <p>
-                  * Intel Xeon E5-2680v2 2.8Ghz <a href="https://ark.intel.com/content/www/kr/ko/ark/products/75277/intel-xeon-processor-e52680-v2-25m-cache-2-80-ghz.html" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v2+%40+2.80GHz&id=2061" target="_blank" class="external">PASSMARK 벤치마크 수치</a><br>
-                  * Intel Xeon E5-2697v2 2.7Ghz <a href="https://ark.intel.com/content/www/kr/ko/ark/products/75283/intel-xeon-processor-e52697-v2-30m-cache-2-70-ghz.html" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2697+v2+%40+2.70GHz&id=2009" target="_blank" class="external">PASSMARK 벤치마크 수치</a>
-                  </p>
-                  <h5>Standard</h5>
-                  <p>
-                  * Intel Xeon E5-2667v4 3.2Ghz <a href="https://ark.intel.com/content/www/kr/ko/ark/products/92979/intel-xeon-processor-e52667-v4-25m-cache-3-20-ghz.html" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2667+v4+%40+3.20GHz&id=2830" target="_blank" class="external">PASSMARK 벤치마크 수치</a><br>
-                  * Intel Xeon E5-2683v4 2.1Ghz <a href="https://www.intel.co.kr/content/www/kr/ko/products/sku/91766/intel-xeon-processor-e52683-v4-40m-cache-2-10-ghz/specifications.html" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2683+v4+%40+2.10GHz&id=2908" target="_blank" class="external">PASSMARK 벤치마크 수치</a><br>
-                  * Intel Xeon Scalable 4116 2.1Ghz <a href="https://www.intel.co.kr/content/www/kr/ko/products/sku/120481/intel-xeon-silver-4116-processor-16-5m-cache-2-10-ghz/specifications.html" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Silver+4116+%40+2.10GHz&id=3179" target="_blank" class="external">PASSMARK 벤치마크 수치</a>
-                  <h5>High Frequency</h5>
-                  <p>
-                  * AMD Ryzen 5950X 3.4Ghz <a href="https://www.amd.com/en/product/10456" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5950X" target="_blank" class="external">PASSMARK 벤치마크 수치</a><br>
-                  * AMD ThreadRipper 2990WX 3.0Ghz <a href="https://www.amd.com/en/product/7926" target="_blank" class="external">제조사 상세 스펙</a> <a href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+2950X&id=3316" target="_blank" class="external">PASSMARK 벤치마크 수치</a>
-                  </p>
+            <h2 class="display-4 mb-3">Frequently Asked Questions</h2>
+            <p class="lead mb-5 hangle">궁금하신 사항을 찾지 못한 경우 아래 버튼을 통해 Seal Shield로 문의하실 수 있습니다.</p>
+            <a href="./contact.html" class="btn btn-primary rounded-pill me-2" target="_blank">연락하기</a>
+            <div class="accordion accordion-wrapper mt-10" id="accordion">
+                <div class="card accordion-item">
+                    <div class="card-header" id="faq-0">
+                        <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-0"
+                            aria-expanded="true" aria-controls="faq-collapse-0"> 클라우드 서버에는 어떤 CPU가 제공되나요? </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="faq-collapse-0" class="accordion-collapse collapse" aria-labelledby="faq-0">
+                        <div class="card-body hangle">
+                            <p>클러스터를 운영하고 있으며, 부하량과 서버 디플로이 시점에 따라 제공되는 CPU가 상이할 수 있습니다.</p>
+                            <h5>High Virtual Server</h5>
+                            <p>
+                                * AMD Ryzen 5950X 3.4Ghz <a href="https://www.amd.com/en/product/10456" target="_blank"
+                                    class="external">제조사 상세 스펙</a> <a
+                                    href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+9+5950X" target="_blank"
+                                    class="external">PASSMARK 벤치마크 수치</a><br>
+                                * AMD ThreadRipper 2990WX 3.0Ghz <a href="https://www.amd.com/en/product/7926"
+                                    target="_blank" class="external">제조사 상세 스펙</a> <a
+                                    href="https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+Threadripper+2950X&id=3316"
+                                    target="_blank" class="external">PASSMARK 벤치마크 수치</a><br />
+                                * Intel Xeon E5-2680v2 2.8Ghz <a
+                                    href="https://ark.intel.com/content/www/kr/ko/ark/products/75277/intel-xeon-processor-e52680-v2-25m-cache-2-80-ghz.html"
+                                    target="_blank" class="external">제조사 상세 스펙</a> <a
+                                    href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2680+v2+%40+2.80GHz&id=2061"
+                                    target="_blank" class="external">PASSMARK 벤치마크 수치</a><br>
+                                * Intel Xeon E5-2697v2 2.7Ghz <a
+                                    href="https://ark.intel.com/content/www/kr/ko/ark/products/75283/intel-xeon-processor-e52697-v2-30m-cache-2-70-ghz.html"
+                                    target="_blank" class="external">제조사 상세 스펙</a> <a
+                                    href="https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E5-2697+v2+%40+2.70GHz&id=2009"
+                                    target="_blank" class="external">PASSMARK 벤치마크 수치</a>
+                            </p>
+                        </div>
+                        <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
+                <!--/.accordion-item -->
             </div>
-            <!--/.accordion-item -->
-          </div>
-          <div class="accordion accordion-wrapper mt-1" id="accordion">
-            <div class="card accordion-item">
-              <div class="card-header" id="faq-1">
-                <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1"> 클라우드 서버에 대역폭은 어떻게 제공되나요? </button>
-              </div>
-              <!--/.card-header -->
-              <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-1">
-                <div class="card-body hangle">
-                  <p>사용 가능한 Traffic(트래픽)과 별개로 Bandwidth(대역폭)은 요금제별로 제공량이 상이 합니다.</p>
-                  <p>
-                  사용하시는 대역폭이 일일 95th Persentile기준 보장 대역폭을 초과할 경우 업링크 속도가 제한될 수 있습니다.<br>
-                  영업팀을 통해 Traffic(트래픽) 빌링 형태를 Bandwidth(대역폭) 기반 과금으로 전환할 수 있습니다.
-                  </p>
-                  <h5>Compact</h5>
-                  <p>
-                  제공 업링크 : 1Gbps<br>
-                  보장 대역폭 : 50Mbps
-                  </p>
-                  <h5>Standard</h5>
-                  <p>
-                  제공 업링크 : 1Gbps / 10Gbps<br>
-                  보장 대역폭 : 100Mbps<br>
-                  * Standard.2xlarge 부터 업링크는 10Gbps로 제공됩니다.
-                  </p>
-                  <h5>High Frequency</h5>
-                  <p>
-                  제공 업링크 : 1Gbps<br>
-                  보장 대역폭 : 100Mbps<br>
-                  </p>
+            <div class="accordion accordion-wrapper mt-1" id="accordion">
+                <div class="card accordion-item">
+                    <div class="card-header" id="faq-1">
+                        <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1"
+                            aria-expanded="true" aria-controls="faq-collapse-1"> 클라우드 서버에 대역폭은 어떻게 제공되나요? </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-1">
+                        <div class="card-body hangle">
+                            <p>사용 가능한 Traffic(트래픽)과 별개로 Bandwidth(대역폭)은 기본제공 20Mbps 입니다.</p>
+                            <p>
+                                사용하시는 대역폭이 일일 95th Persentile기준 보장 대역폭을 초과할 경우 업링크 속도가 제한될 수 있습니다.<br>
+                                영업팀을 통해 Traffic(트래픽) 빌링 형태를 Bandwidth(대역폭) 기반 과금으로 전환할 수 있습니다.
+                            </p>
+                            <h5>High Virtual Server</h5>
+                            <p>
+                                제공 업링크 : 1Gbps<br>
+                                보장 대역폭 : 20Mbps<br>
+                            </p>
+                        </div>
+                        <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
+                <!--/.accordion-item -->
             </div>
-            <!--/.accordion-item -->
-          </div>		
-          <div class="accordion accordion-wrapper mt-1" id="accordion">
-            <div class="card accordion-item">
-              <div class="card-header" id="faq-2">
-                <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="true" aria-controls="faq-collapse-2"> 초과 트래픽 비용은 어떻게 산정되나요? </button>
-              </div>
-              <!--/.card-header -->
-              <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-2">
-                <div class="card-body hangle">
-                  <p>모든 리전에 대해 초과 트래픽 요금은 GB당 30원으로 고정적으로 적용되고 있습니다.</p>
-                  <p>월 전송량이 200TB 이상인 경우 Custom Pricing을 제안드릴 수 있습니다.</p>
+            <div class="accordion accordion-wrapper mt-1" id="accordion">
+                <div class="card accordion-item">
+                    <div class="card-header" id="faq-2">
+                        <button class="collapsed hangle" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2"
+                            aria-expanded="true" aria-controls="faq-collapse-2"> 초과 트래픽 비용은 어떻게 산정되나요? </button>
+                    </div>
+                    <!--/.card-header -->
+                    <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-2">
+                        <div class="card-body hangle">
+                            <p>모든 리전에 대한 트래픽은 무제한입니다.</p>
+                            <p>월 전송량이 200TB 이상인 경우 Custom Pricing을 제안드릴 수 있습니다.</p>
+                        </div>
+                        <!--/.card-body -->
+                    </div>
+                    <!--/.accordion-collapse -->
                 </div>
-                <!--/.card-body -->
-              </div>
-              <!--/.accordion-collapse -->
+                <!--/.accordion-item -->
             </div>
-            <!--/.accordion-item -->
-          </div>
         </div>
         <!-- /.container -->
         </div>
         <!-- /.container -->
-      </section>
-      <!-- /section -->
+    </section>
+    <!-- /section -->
 
 
 
 
-	
-	</div>
-	<!-- /.content-wrapper -->
-	<footer>
-		<div class="container pt-10 pb-7">
-		  <div class="row gx-lg-0 gy-6">
-			<div class="col-lg-4">
-			  <div class="widget">
-				  <h2 class="logo-dark mb-1" style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
-					<p class="lead mb-1">Next Generation Cloud Platform</p>
-				  <p class="mb-0 hangle" style="font-size: .6rem;">
-					  대표이사 : 김기훈<br>
-					  사업자등록번호 : 622-10-16198<br>
-					  통신판매업 신고번호 : 2020-인천연수구-0758<br>
-				  </p>
-			  </div>
-			  <!-- /.widget -->
-			</div>
-			<!-- /column -->
-			<div class="col-lg-4">
-			  <div class="widget">
-				<div class="d-flex flex-row">
-				  <div>
-					<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
-				  </div>
-				  <div>
-					<h5 class="mb-1 hangle">고객 지원</h5>
-					<p class="mb-0 hangle">영업 문의 sales@Seal.Shield<br />기술 문의 tech@Seal.Shield<br />전화 문의 +82-70-70-7912-3308</p>
-				  </div>
-				</div>
-				<!--/div -->
-			  </div>
-			  <!-- /.widget -->
-			</div>
-			<!-- /column -->
-			<div class="col-lg-4">
-			  <div class="widget">
-				<div class="d-flex flex-row">
-				  <div>
-					<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
-				  </div>
-				  <div class="align-self-start justify-content-start hangle">
-					<h5 class="mb-1 hangle">주소</h5>
-					<address>인천광역시 연수구 인천타워대로 99</address>
-				  </div>
-				</div>
-				<!--/div -->
-			  </div>
-			  <!-- /.widget -->
-			</div>
-			<!-- /column -->
-		  </div>
-		  <!--/.row -->
-		  <hr class="mt-7 mt-md-7 mb-7" />
-		  <div class="d-md-flex align-items-center justify-content-between">
-			<p class="mb-2 mb-lg-0">© 2023 Seal Shield Inc, All Rights Reserved.</p>
-			<nav class="nav mb-0 hangle">
-			  <a href="/legal/term" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">서비스 이용약관</a>
-			  <a href="/legal/privacy" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">개인정보 처리방침</a>
-			</nav>
-			<!-- /.social -->
-		  </div>
-		</div>
-		<!-- /.container -->
-	  </footer>
-	  <div class="progress-wrap">
-		  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-		  <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-		  </svg>
-	  </div>
-	  <script src="./static/js/plugins.js"></script>
-	  <script src="./static/js/theme.js"></script>
-	  <script>
-		  function closePop(){
-			  var popup = document.getElementsByClassName("kbDpsJ");
-			  popup[0].style.display = "none";
-		  }
-	  </script>
-	  <article role="dialog" class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0 kbDpsJ">
-		  <h2 class="a11y-hidden">Channel Talk pop-up</h2>
-		  <div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 gcPqyR">
-		  <button type="button" class="PCLabelButton__LabelButton-ch-front__sc-1viw4do-0 kdbiBm">
-			  <div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 iOwXlC">
-			  <div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 kqRZza">궁금한 건 텔레그램으로 문의하세요</div>
-			  <div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 jOeHgT">
-				  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 iCEngM" data-testid="bezier-react-icon" color="bgtxt-green-normal" margintop="0" marginright="0" marginbottom="0" marginleft="0">
-				  <path fill="currentColor" fill-rule="evenodd" d="m18.54 10.226-4.319-1 2.082-7.083c.146-.496-.468-.86-.833-.493L5.146 12.002a.5.5 0 0 0 .242.84l4.32 1-2.084 7.082c-.146.498.468.861.834.494l10.323-10.352a.5.5 0 0 0-.24-.84Z" clip-rule="evenodd"></path>
-				  </svg>빠르게 답변 받으실 수 있어요</span>
-			  </div>
-			  </div>
-		  </button>
-		  <div class="PCLabelButton__CloseButtonArea-ch-front__sc-1viw4do-7 imEiwF">
-			  <span class="a11y-hidden">Close</span>
-			  <button class="PCLabelButton__CloseButton-ch-front__sc-1viw4do-6 flvCTH" onclick="closePop()">
-			  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" foundation="[object Object]" class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dVEMjZ PCLabelButton__CloseIcon-ch-front__sc-1viw4do-5 hLYLWV" defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0" marginleft="0" withtheme="false">
-				  <path fill="currentColor" d="M4.92893 4.92893C4.34315 5.51472 4.34315 6.46447 4.92893 7.05025L9.87868 12L4.92893 16.9497C4.34315 17.5355 4.34315 18.4853 4.92893 19.0711C5.51472 19.6569 6.46447 19.6569 7.05025 19.0711L12 14.1213L16.9497 19.0711C17.5355 19.6569 18.4853 19.6569 19.0711 19.0711C19.6569 18.4853 19.6569 17.5355 19.0711 16.9497L14.1213 12L19.0711 7.05025C19.6569 6.46447 19.6569 5.51472 19.0711 4.92893C18.4853 4.34315 17.5355 4.34315 16.9497 4.92893L12 9.87868L7.05025 4.92893C6.46447 4.34315 5.51472 4.34315 4.92893 4.92893Z"></path>
-			  </svg>
-			  </button>
-		  </div>
-		  </div>
-	  </article>
-	  <div data-ch-testid="launcher" class="Launcherstyled__LauncherButtonWrapper-ch-front__sc-vjd8p8-0 fhSQvV">
-		  <button type="button" onclick="window.open('https://t.me/sealshield/')">
-		  <div class="ChatButtonContainer__Container-ch-front__sc-1xjuzon-0 bKNCWH">
-			  <span class="a11y-hidden">Channel Chat Button</span>
-			  <div class="SenderButtonView__Wrapper-ch-front__sc-16y2woi-0 omWkp">
-			  <div src="./static/img/tele_logo.png" class="SenderButtonView__SenderAvatarBg-ch-front__sc-16y2woi-1 LVsny"></div>
-			  </div>
-			  <div class="IconButtonView__Background-ch-front__sc-vtu014-0 jaYpSL">
-			  <svg width="36" height="36" color="#ffffff">
-				  <use href="#channel-filled"></use>
-			  </svg>
-			  </div>
-			  <div class="MinimizeButtonView__Wrapper-ch-front__sc-11fv1z6-0 aSXzX">
-			  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 pJGcx" data-testid="bezier-react-icon" color="txt-black-darker" margintop="0" marginright="0" marginbottom="0" marginleft="0" aria-hidden="true">
-				  <path fill="currentColor" fill-rule="evenodd" d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.051A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.535a1 1 0 1 0 1.414 1.414L12 13.414l3.536 3.536a1 1 0 0 0 1.414-1.415L13.414 12l3.536-3.536Z" clip-rule="evenodd"></path>
-			  </svg>
-			  </div>
-		  </div>
-		  </button>
-	  </div>
+
+    </div>
+    <!-- /.content-wrapper -->
+    <footer>
+        <div class="container pt-10 pb-7">
+            <div class="row gx-lg-0 gy-6">
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <h2 class="logo-dark mb-1"
+                            style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d
+                                style="color: #27cf7b;">.</d>
+                        </h2>
+                        <p class="lead mb-1">Next Generation Cloud Platform</p>
+                        <p class="mb-0 hangle" style="font-size: .6rem;">
+                            대표이사 : 김기훈<br>
+                            사업자등록번호 : 622-10-16198<br>
+                            통신판매업 신고번호 : 2020-인천연수구-0758<br>
+                        </p>
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <div class="d-flex flex-row">
+                            <div>
+                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1 hangle">고객 지원</h5>
+                                <p class="mb-0 hangle">영업 문의 sales@Seal.Shield<br />기술 문의 tech@Seal.Shield<br />전화 문의
+                                    +82-70-70-7912-3308</p>
+                            </div>
+                        </div>
+                        <!--/div -->
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+                <div class="col-lg-4">
+                    <div class="widget">
+                        <div class="d-flex flex-row">
+                            <div>
+                                <div class="icon text-primary fs-28 me-4 mt-n1"> <i
+                                        class="uil uil-location-pin-alt"></i> </div>
+                            </div>
+                            <div class="align-self-start justify-content-start hangle">
+                                <h5 class="mb-1 hangle">주소</h5>
+                                <address>인천광역시 연수구 인천타워대로 99</address>
+                            </div>
+                        </div>
+                        <!--/div -->
+                    </div>
+                    <!-- /.widget -->
+                </div>
+                <!-- /column -->
+            </div>
+            <!--/.row -->
+            <hr class="mt-7 mt-md-7 mb-7" />
+            <div class="d-md-flex align-items-center justify-content-between">
+                <p class="mb-2 mb-lg-0">© 2023 Seal Shield Inc, All Rights Reserved.</p>
+                <nav class="nav mb-0 hangle">
+                    <a href="./term.html" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">서비스 이용약관</a>
+                    <a href="./privacy.html" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">개인정보
+                        처리방침</a>
+                </nav>
+                <!-- /.social -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <script src="./static/js/plugins.js"></script>
+    <script src="./static/js/theme.js"></script>
+    <script>
+        function closePop() {
+            var popup = document.getElementsByClassName("kbDpsJ");
+            popup[0].style.display = "none";
+        }
+    </script>
+    <article role="dialog" class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0 kbDpsJ">
+        <h2 class="a11y-hidden">Channel Talk pop-up</h2>
+        <div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 gcPqyR">
+            <button type="button" class="PCLabelButton__LabelButton-ch-front__sc-1viw4do-0 kdbiBm">
+                <div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 iOwXlC">
+                    <div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 kqRZza">궁금한 건 텔레그램으로 문의하세요</div>
+                    <div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 jOeHgT">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+                            foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 iCEngM"
+                            data-testid="bezier-react-icon" color="bgtxt-green-normal" margintop="0" marginright="0"
+                            marginbottom="0" marginleft="0">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="m18.54 10.226-4.319-1 2.082-7.083c.146-.496-.468-.86-.833-.493L5.146 12.002a.5.5 0 0 0 .242.84l4.32 1-2.084 7.082c-.146.498.468.861.834.494l10.323-10.352a.5.5 0 0 0-.24-.84Z"
+                                clip-rule="evenodd"></path>
+                        </svg>빠르게 답변 받으실 수 있어요</span>
+                    </div>
+                </div>
+            </button>
+            <div class="PCLabelButton__CloseButtonArea-ch-front__sc-1viw4do-7 imEiwF">
+                <span class="a11y-hidden">Close</span>
+                <button class="PCLabelButton__CloseButton-ch-front__sc-1viw4do-6 flvCTH" onclick="closePop()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        foundation="[object Object]"
+                        class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dVEMjZ PCLabelButton__CloseIcon-ch-front__sc-1viw4do-5 hLYLWV"
+                        defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0"
+                        marginleft="0" withtheme="false">
+                        <path fill="currentColor"
+                            d="M4.92893 4.92893C4.34315 5.51472 4.34315 6.46447 4.92893 7.05025L9.87868 12L4.92893 16.9497C4.34315 17.5355 4.34315 18.4853 4.92893 19.0711C5.51472 19.6569 6.46447 19.6569 7.05025 19.0711L12 14.1213L16.9497 19.0711C17.5355 19.6569 18.4853 19.6569 19.0711 19.0711C19.6569 18.4853 19.6569 17.5355 19.0711 16.9497L14.1213 12L19.0711 7.05025C19.6569 6.46447 19.6569 5.51472 19.0711 4.92893C18.4853 4.34315 17.5355 4.34315 16.9497 4.92893L12 9.87868L7.05025 4.92893C6.46447 4.34315 5.51472 4.34315 4.92893 4.92893Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </article>
+    <div data-ch-testid="launcher" class="Launcherstyled__LauncherButtonWrapper-ch-front__sc-vjd8p8-0 fhSQvV">
+        <button type="button" onclick="window.open('https://t.me/sealshield/')">
+            <div class="ChatButtonContainer__Container-ch-front__sc-1xjuzon-0 bKNCWH">
+                <span class="a11y-hidden">Channel Chat Button</span>
+                <div class="SenderButtonView__Wrapper-ch-front__sc-16y2woi-0 omWkp">
+                    <div src="./static/img/tele_logo.png"
+                        class="SenderButtonView__SenderAvatarBg-ch-front__sc-16y2woi-1 LVsny"></div>
+                </div>
+                <div class="IconButtonView__Background-ch-front__sc-vtu014-0 jaYpSL">
+                    <svg width="36" height="36" color="#ffffff">
+                        <use href="#channel-filled"></use>
+                    </svg>
+                </div>
+                <div class="MinimizeButtonView__Wrapper-ch-front__sc-11fv1z6-0 aSXzX">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24"
+                        foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 pJGcx"
+                        data-testid="bezier-react-icon" color="txt-black-darker" margintop="0" marginright="0"
+                        marginbottom="0" marginleft="0" aria-hidden="true">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.051A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.535a1 1 0 1 0 1.414 1.414L12 13.414l3.536 3.536a1 1 0 0 0 1.414-1.415L13.414 12l3.536-3.536Z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+        </button>
+    </div>
 </body>
 
 </html>

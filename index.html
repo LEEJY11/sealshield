@@ -1,368 +1,751 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="IT 비즈니스에 필요한 클라우드 호스팅과 보안 서비스를 제공합니다.">
-  <meta name="keywords" content="클라우드, 보안클라우드, 디도스보안, 디도스방어, IPS, IDS">
-  <meta name="author" content="cloudnx">
-  <title>Seal Shield - Next Generation Cloud Platform</title>
-  <link rel="shortcut icon" href="./static/img/favicon.png">
-  <link rel="stylesheet" href="./static/css/plugins.css">
-  <link rel="stylesheet" href="./static/css/style.css">
-  <link rel="stylesheet" href="./static/css/colors/sky.css">
-  <link rel="preload" href="./static/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="stylesheet" href="./static/css/common.css">
-  <link rel="stylesheet" href="https://webfontworld.github.io/naver/NanumSquare.css">
-  <style>
-	.hangle {
-		font-family: 'NanumSquare';
-		font-weight: 450; 
-	}
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="IT 비즈니스에 필요한 클라우드 호스팅과 보안 서비스를 제공합니다.">
+	<meta name="keywords" content="클라우드, 보안클라우드, 디도스보안, 디도스방어, IPS, IDS">
+	<meta name="author" content="cloudnx">
+	<title>Seal Shield - Next Generation Cloud Platform</title>
+	<link rel="shortcut icon" href="./static/img/favicon.png">
+	<link rel="stylesheet" href="./static/css/plugins.css">
+	<link rel="stylesheet" href="./static/css/style.css">
+	<link rel="stylesheet" href="./static/css/colors/sky.css">
+	<link rel="preload" href="./static/css/fonts/urbanist.css" as="style" onload="this.rel='stylesheet'">
+	<link rel="stylesheet" href="./static/css/common.css">
+	<link rel="stylesheet" href="https://webfontworld.github.io/naver/NanumSquare.css">
+	<style>
+		.hangle {
+			font-family: 'NanumSquare';
+			font-weight: 450;
+		}
+	</style>
 </head>
 
 <body>
-    <div style='display:none' id='sbbhscc'></div>
+	<div style='display:none' id='sbbhscc'></div>
 	<script type="text/javascript">
-	var sbbvscc='';
-	var sbbgscc='';
-	function genPid() {return String.fromCharCode(84)+String.fromCharCode(69) ; };
+		var sbbvscc = '';
+		var sbbgscc = '';
+
+		function genPid() {
+			return String.fromCharCode(84) + String.fromCharCode(69);
+		};
 	</script>
-    <div id='sbbfrcc' style='position: absolute; top: -10px; left: 30px; font-size:1px'></div>
-  	<script type="text/javascript">(function(XHR){var open=XHR.prototype.open;var send=XHR.prototype.send;var parser=document.createElement('a');XHR.prototype.open=function(method, url, async, user, pass){if(typeof async=='undefined'){async=true;}parser.href=url;if(parser.host==''){parser.href=parser.href;}this.ajax_hostname=parser.hostname;open.call(this, method, url, async, user, pass);};XHR.prototype.send=function(data){if(location.hostname==this.ajax_hostname)this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");send.call(this, data);}})(XMLHttpRequest);if(typeof(fetch)!="undefined"){var nsbbfetch=fetch;fetch=function(url, init){if(typeof(url)==="object" && typeof(url.url)==="string"){init={method: url.method, mode: url.mode, cache: url.cache, credentials: url.credentials, headers: url.headers, body: url.body};url=url.url;}function sbbSd(url, domain){var parser=document.createElement('a');parser.href=url;if(parser.host==''){parser.href=parser.href;}return parser.hostname==location.hostname;}if(sbbSd(url, document.domain)){init=typeof init !=='undefined' ? init :{};if(typeof(init.headers)==="undefined"){init.headers={};}init.headers['X-MOD-SBB-CTYPE']='fetch';}return nsbbfetch(url, init);};}function sbbgc(check_name){var start=document.cookie.indexOf(check_name+"=");var oVal='';var len=start+check_name.length+1;if((!start)&&(document.cookie.substring(0,check_name.length)!=check_name)){oVal='';}else if(start==-1){oVal='';}else{var end=document.cookie.indexOf(';',len);if(end==-1)end=document.cookie.length;var oVal=document.cookie.substring(len,end);};return oVal;}function addmg(inm,ext){var primgobj=document.createElement('IMG');primgobj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+"/sbbi/?sbbpg="+inm+(ext?"&"+ext:"");var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(primgobj);};function addprid(prid){var oldVal=sbbgc("PRLST");if((oldVal.indexOf(prid)==-1)&&(oldVal.split('/').length<5)){if(oldVal!=''){oldVal+='/';}document.cookie='PRLST='+oldVal+escape(prid)+';path=/; SameSite=Lax;';}}var sbbeccf=function(){this.sp3="jass";this.sf1=function(vd){return sf2(vd)+32;};var sf2=function(avd){return avd*12;};this.sf4=function(yavd){return yavd+2;};var strrp=function(str, key, value){if(str.indexOf('&'+key+'=')> -1 || str.indexOf(key+'=')==0){var idx=str.indexOf('&'+key+'=');if(idx==-1)idx=str.indexOf(key+'=');var end=str.indexOf('&', idx+1);var newstr;if(end !=-1)newstr=str.substr(0, idx)+str.substr(end+(idx ? 0 : 1))+'&'+key+'='+value;else newstr=str.substr(0, idx)+'&'+key+'='+value;return newstr;}else return str+'&'+key+'='+value;};var strgt=function(name, text){if(typeof text !='string')return "";var nameEQ=name+"=";var ca=text.split(/[;&]/);for(var i=0;i < ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1, c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length, c.length);}return "";};this.sfecgs={sbbgh:function(){var domain=document.location.host;if(domain.indexOf('www.')==0)domain=domain.replace('www.', '');return domain;}, f:function(name, value){var fv="";if(window.globalStorage){var host=this.sbbgh();try{if(typeof(value)!="undefined")globalStorage[host][name]=value;else{fv=globalStorage[host][name];if(typeof(fv.toString)!="undefined")fv=fv.toString();}}catch(e){}}return fv;}, name:"sbbrf"};this.sfecls={f:function(name, value){var fv="";try{if(window.localStorage){if(typeof(value)!="undefined")localStorage.setItem(name, value);else{fv=localStorage.getItem(name);if(typeof(fv.toString)!="undefined")fv=fv.toString();}}}catch(e){}return fv;}, name:"sbbrf"};this.sbbcv=function(invl){try{var invalArr=invl.split("-");if(invalArr.length>1){if(invalArr[0]=="A"||invalArr[0]=="D"){invl=invalArr[1];}else invl="";}if(invl==null||typeof(invl)=="undefined"||invl=="falseImgUT"||invl=="undefined"||invl=="null"||invl!=encodeURI(invl))invl="";if(typeof(invl).toLowerCase()=="string")if(invl.length>20)if(invl.substr(0,2)!="h4")invl="";}catch(ex){invl="";}return invl;};this.sbbsv=function(fv){for(var elm in this){if(this[elm].name=="sbbrf"){this[elm].f("altutgv2",fv);}}document.cookie="UTGv2="+fv+';expires=Tue, 16-Apr-24 06:05:14 GMT;path=/; SameSite=Lax;';};this.sbbgv=function(){var valArr=Array();var currVal="";for(var elm in this){if(this[elm].name=="sbbrf"){currVal=this[elm].f("altutgv2");currVal=this.sbbcv(currVal);if(currVal!="")valArr[currVal]=(typeof(valArr[currVal])!="undefined"?valArr[currVal]+1:1);}}var lb=0;var fv="";for(var val in valArr){if(valArr[val]>lb){fv=val;lb=valArr[val]}}if(fv=="")fv=sbbgc("UTGv2");fv=this.sbbcv(fv);if(fv!="")this.sbbsv(fv);else this.sbbsv("h400ca4bf3c9b5b07fb9dda92ae900127348");return fv;};};function m2vr(m1,m2){var i=0;var rc="";var est="ghijklmnopqrstuvwyz";var rnum;var rpl;var charm1=m1.charAt(i);var charm2=m2.charAt(i);while(charm1!=""||charm2!=""){rnum=Math.floor(Math.random()* est.length);rpl=est.substring(rnum,rnum+1);rc+=(charm1==""?rpl:charm1)+(charm2==""?rpl:charm2);i++;charm1=m1.charAt(i);charm2=m2.charAt(i);}return rc;}function sbbls(prid){try{var eut=sbbgc("UTGv2");window.sbbeccfi=new sbbeccf();window.sbbgs=sbbeccfi.sbbgv();if(eut!=sbbgs && sbbgs!="" && typeof(sbbfcr)=="undefined"){addmg('utMedia',"vii="+m2vr("105ef889c9e85e5e39eedaf09d786b47",sbbgs));}var sbbiframeObj=document.createElement('IFRAME');var dfx=new Date();sbbiframeObj.id='SBBCrossIframe';sbbiframeObj.title='SBBCrossIframe';sbbiframeObj.tabindex='-1';sbbiframeObj.lang='en';sbbiframeObj.style.visibility='hidden';sbbiframeObj.setAttribute('aria-hidden', 'true');sbbiframeObj.style.border='0px';if(document.all){sbbiframeObj.style.position='absolute';sbbiframeObj.style.top='-1px';sbbiframeObj.style.height='1px';sbbiframeObj.style.width='28px';}else{sbbiframeObj.style.height='1px';sbbiframeObj.style.width='0px';}sbbiframeObj.scrolling="NO";sbbiframeObj.src=window.location.protocol+"//"+window.location.hostname+(window.location.port && window.location.port!=80 ? ':'+window.location.port: '')+'/sbbi/?sbbpg=sbbShell&gprid='+prid+'';var sbbDiv=document.getElementById('sbbfrcc');sbbDiv.appendChild(sbbiframeObj);}catch(ex){;}}try{var y=unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));document.getElementById('sbbhscc').innerHTML=y;var x=unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g,''));}catch(e){x='function genPid(){return "jser";}';}try{if(window.gprid==undefined)document.write('<'+'script type="text/javascri'+'pt">'+x+"var gprid=genPid();addprid(gprid);var sbbfcr=true;sbbls(gprid);<"+"/script>");}catch(e){addprid("dwer");}</script>
+	<div id='sbbfrcc' style='position: absolute; top: -10px; left: 30px; font-size:1px'></div>
+	<script type="text/javascript">
+		(function (XHR) {
+			var open = XHR.prototype.open;
+			var send = XHR.prototype.send;
+			var parser = document.createElement('a');
+			XHR.prototype.open = function (method, url, async, user, pass) {
+				if (typeof async =='undefined') {
+					async = true;
+				}
+				parser.href = url;
+				if (parser.host == '') {
+					parser.href = parser.href;
+				}
+				this.ajax_hostname = parser.hostname;
+				open.call(this, method, url, async, user, pass);
+			};
+			XHR.prototype.send = function (data) {
+				if (location.hostname == this.ajax_hostname) this.setRequestHeader("X-MOD-SBB-CTYPE", "xhr");
+				send.call(this, data);
+			}
+		})(XMLHttpRequest);
+		if (typeof (fetch) != "undefined") {
+			var nsbbfetch = fetch;
+			fetch = function (url, init) {
+				if (typeof (url) === "object" && typeof (url.url) === "string") {
+					init = {
+						method: url.method,
+						mode: url.mode,
+						cache: url.cache,
+						credentials: url.credentials,
+						headers: url.headers,
+						body: url.body
+					};
+					url = url.url;
+				}
+
+				function sbbSd(url, domain) {
+					var parser = document.createElement('a');
+					parser.href = url;
+					if (parser.host == '') {
+						parser.href = parser.href;
+					}
+					return parser.hostname == location.hostname;
+				}
+				if (sbbSd(url, document.domain)) {
+					init = typeof init !== 'undefined' ? init : {};
+					if (typeof (init.headers) === "undefined") {
+						init.headers = {};
+					}
+					init.headers['X-MOD-SBB-CTYPE'] = 'fetch';
+				}
+				return nsbbfetch(url, init);
+			};
+		}
+
+		function sbbgc(check_name) {
+			var start = document.cookie.indexOf(check_name + "=");
+			var oVal = '';
+			var len = start + check_name.length + 1;
+			if ((!start) && (document.cookie.substring(0, check_name.length) != check_name)) {
+				oVal = '';
+			} else if (start == -1) {
+				oVal = '';
+			} else {
+				var end = document.cookie.indexOf(';', len);
+				if (end == -1) end = document.cookie.length;
+				var oVal = document.cookie.substring(len, end);
+			};
+			return oVal;
+		}
+
+		function addmg(inm, ext) {
+			var primgobj = document.createElement('IMG');
+			primgobj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port && window
+				.location.port != 80 ? ':' + window.location.port : '') + "/sbbi/?sbbpg=" + inm + (ext ? "&" + ext : "");
+			var sbbDiv = document.getElementById('sbbfrcc');
+			sbbDiv.appendChild(primgobj);
+		};
+
+		function addprid(prid) {
+			var oldVal = sbbgc("PRLST");
+			if ((oldVal.indexOf(prid) == -1) && (oldVal.split('/').length < 5)) {
+				if (oldVal != '') {
+					oldVal += '/';
+				}
+				document.cookie = 'PRLST=' + oldVal + escape(prid) + ';path=/; SameSite=Lax;';
+			}
+		}
+		var sbbeccf = function () {
+			this.sp3 = "jass";
+			this.sf1 = function (vd) {
+				return sf2(vd) + 32;
+			};
+			var sf2 = function (avd) {
+				return avd * 12;
+			};
+			this.sf4 = function (yavd) {
+				return yavd + 2;
+			};
+			var strrp = function (str, key, value) {
+				if (str.indexOf('&' + key + '=') > -1 || str.indexOf(key + '=') == 0) {
+					var idx = str.indexOf('&' + key + '=');
+					if (idx == -1) idx = str.indexOf(key + '=');
+					var end = str.indexOf('&', idx + 1);
+					var newstr;
+					if (end != -1) newstr = str.substr(0, idx) + str.substr(end + (idx ? 0 : 1)) + '&' + key + '=' +
+						value;
+					else newstr = str.substr(0, idx) + '&' + key + '=' + value;
+					return newstr;
+				} else return str + '&' + key + '=' + value;
+			};
+			var strgt = function (name, text) {
+				if (typeof text != 'string') return "";
+				var nameEQ = name + "=";
+				var ca = text.split(/[;&]/);
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+				}
+				return "";
+			};
+			this.sfecgs = {
+				sbbgh: function () {
+					var domain = document.location.host;
+					if (domain.indexOf('www.') == 0) domain = domain.replace('www.', '');
+					return domain;
+				},
+				f: function (name, value) {
+					var fv = "";
+					if (window.globalStorage) {
+						var host = this.sbbgh();
+						try {
+							if (typeof (value) != "undefined") globalStorage[host][name] = value;
+							else {
+								fv = globalStorage[host][name];
+								if (typeof (fv.toString) != "undefined") fv = fv.toString();
+							}
+						} catch (e) {}
+					}
+					return fv;
+				},
+				name: "sbbrf"
+			};
+			this.sfecls = {
+				f: function (name, value) {
+					var fv = "";
+					try {
+						if (window.localStorage) {
+							if (typeof (value) != "undefined") localStorage.setItem(name, value);
+							else {
+								fv = localStorage.getItem(name);
+								if (typeof (fv.toString) != "undefined") fv = fv.toString();
+							}
+						}
+					} catch (e) {}
+					return fv;
+				},
+				name: "sbbrf"
+			};
+			this.sbbcv = function (invl) {
+				try {
+					var invalArr = invl.split("-");
+					if (invalArr.length > 1) {
+						if (invalArr[0] == "A" || invalArr[0] == "D") {
+							invl = invalArr[1];
+						} else invl = "";
+					}
+					if (invl == null || typeof (invl) == "undefined" || invl == "falseImgUT" || invl == "undefined" ||
+						invl == "null" || invl != encodeURI(invl)) invl = "";
+					if (typeof (invl).toLowerCase() == "string")
+						if (invl.length > 20)
+							if (invl.substr(0, 2) != "h4") invl = "";
+				} catch (ex) {
+					invl = "";
+				}
+				return invl;
+			};
+			this.sbbsv = function (fv) {
+				for (var elm in this) {
+					if (this[elm].name == "sbbrf") {
+						this[elm].f("altutgv2", fv);
+					}
+				}
+				document.cookie = "UTGv2=" + fv + ';expires=Tue, 16-Apr-24 06:05:14 GMT;path=/; SameSite=Lax;';
+			};
+			this.sbbgv = function () {
+				var valArr = Array();
+				var currVal = "";
+				for (var elm in this) {
+					if (this[elm].name == "sbbrf") {
+						currVal = this[elm].f("altutgv2");
+						currVal = this.sbbcv(currVal);
+						if (currVal != "") valArr[currVal] = (typeof (valArr[currVal]) != "undefined" ? valArr[
+							currVal] + 1 : 1);
+					}
+				}
+				var lb = 0;
+				var fv = "";
+				for (var val in valArr) {
+					if (valArr[val] > lb) {
+						fv = val;
+						lb = valArr[val]
+					}
+				}
+				if (fv == "") fv = sbbgc("UTGv2");
+				fv = this.sbbcv(fv);
+				if (fv != "") this.sbbsv(fv);
+				else this.sbbsv("h400ca4bf3c9b5b07fb9dda92ae900127348");
+				return fv;
+			};
+		};
+
+		function m2vr(m1, m2) {
+			var i = 0;
+			var rc = "";
+			var est = "ghijklmnopqrstuvwyz";
+			var rnum;
+			var rpl;
+			var charm1 = m1.charAt(i);
+			var charm2 = m2.charAt(i);
+			while (charm1 != "" || charm2 != "") {
+				rnum = Math.floor(Math.random() * est.length);
+				rpl = est.substring(rnum, rnum + 1);
+				rc += (charm1 == "" ? rpl : charm1) + (charm2 == "" ? rpl : charm2);
+				i++;
+				charm1 = m1.charAt(i);
+				charm2 = m2.charAt(i);
+			}
+			return rc;
+		}
+
+		function sbbls(prid) {
+			try {
+				var eut = sbbgc("UTGv2");
+				window.sbbeccfi = new sbbeccf();
+				window.sbbgs = sbbeccfi.sbbgv();
+				if (eut != sbbgs && sbbgs != "" && typeof (sbbfcr) == "undefined") {
+					addmg('utMedia', "vii=" + m2vr("105ef889c9e85e5e39eedaf09d786b47", sbbgs));
+				}
+				var sbbiframeObj = document.createElement('IFRAME');
+				var dfx = new Date();
+				sbbiframeObj.id = 'SBBCrossIframe';
+				sbbiframeObj.title = 'SBBCrossIframe';
+				sbbiframeObj.tabindex = '-1';
+				sbbiframeObj.lang = 'en';
+				sbbiframeObj.style.visibility = 'hidden';
+				sbbiframeObj.setAttribute('aria-hidden', 'true');
+				sbbiframeObj.style.border = '0px';
+				if (document.all) {
+					sbbiframeObj.style.position = 'absolute';
+					sbbiframeObj.style.top = '-1px';
+					sbbiframeObj.style.height = '1px';
+					sbbiframeObj.style.width = '28px';
+				} else {
+					sbbiframeObj.style.height = '1px';
+					sbbiframeObj.style.width = '0px';
+				}
+				sbbiframeObj.scrolling = "NO";
+				sbbiframeObj.src = window.location.protocol + "//" + window.location.hostname + (window.location.port &&
+						window.location.port != 80 ? ':' + window.location.port : '') + '/sbbi/?sbbpg=sbbShell&gprid=' +
+					prid + '';
+				var sbbDiv = document.getElementById('sbbfrcc');
+				sbbDiv.appendChild(sbbiframeObj);
+			} catch (ex) {
+				;
+			}
+		}
+		try {
+			var y = unescape(sbbvscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+			document.getElementById('sbbhscc').innerHTML = y;
+			var x = unescape(sbbgscc.replace(/^<\!\-\-\s*|\s*\-\->$/g, ''));
+		} catch (e) {
+			x = 'function genPid(){return "jser";}';
+		}
+		try {
+			if (window.gprid == undefined) document.write('<' + 'script type="text/javascri' + 'pt">' + x +
+				"var gprid=genPid();addprid(gprid);var sbbfcr=true;sbbls(gprid);<" + "/script>");
+		} catch (e) {
+			addprid("dwer");
+		}
+	</script>
 	<div class="content-wrapper">
 		<header class="wrapper bg-soft-primary">
 			<nav class="navbar navbar-expand-lg classic transparent position-absolute navbar-dark">
 				<div class="container flex-lg-row flex-nowrap align-items-center">
 					<div class="navbar-brand w-100">
-						<a href="/">
-							<h2 class="logo-dark" style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
-							<h2 class="logo-light" style="color: #FFFFFF; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
+						<a href="./index.html">
+							<h2 class="logo-dark"
+								style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield
+								<d style="color: #27cf7b;">.</d>
+							</h2>
+							<h2 class="logo-light"
+								style="color: #FFFFFF; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield
+								<d style="color: #27cf7b;">.</d>
+							</h2>
 						</a>
 					</div>
 					<div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
 						<div class="offcanvas-header d-lg-none">
 							<h3 class="text-white fs-30 mb-0">Seal Shield</h3>
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+								aria-label="Close"></button>
 						</div>
 						<div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-						<ul class="navbar-nav">
-							<li class="nav-item dropdown dropdown-mega"> 
-								<a class="nav-link hangle" href="/">홈</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">디도스 보안존 상품</a>
-								<div class="dropdown-menu dropdown-lg">
-									<div class="dropdown-lg-content">
-										<div>
-											<h6 class="dropdown-header">Compute</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="./virtualServer.html">가상 서버</a></li>
-												<li><a class="dropdown-item hangle" href="./singleServer.html">단독 서버</a></li>
-												<li><a class="dropdown-item hangle" href="./japanSingleServer.html">일본 단독 서버</a></li>
-											</ul>
-										</div>
-										<div>
-											<h6 class="dropdown-header">Network</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="/product/dia">우회 방어 회선 연동</a></li>
-											</ul>
-										</div>
-										<div>
-											<h6 class="dropdown-header">Datacenter</h6>
-											<ul class="list-unstyled">
-												<li><a class="dropdown-item hangle" href="#">코로케이션</a></li>
-												<li><a class="dropdown-item hangle" href="#">클라우드플레어 스펙트럼</a></li>
-											</ul>
+							<ul class="navbar-nav">
+								<li class="nav-item dropdown dropdown-mega">
+									<a class="nav-link hangle" href="./index.html">홈</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">디도스
+										보안존 상품</a>
+									<div class="dropdown-menu dropdown-lg">
+										<div class="dropdown-lg-content">
+											<div>
+												<h6 class="dropdown-header">Compute</h6>
+												<ul class="list-unstyled">
+													<li><a class="dropdown-item hangle" href="./virtualServer.html">가상
+															서버</a></li>
+													<li><a class="dropdown-item hangle" href="./dedicatedServer.html">단독
+															서버</a></li>
+													<li><a class="dropdown-item hangle"
+															href="./japanDedicatedServer.html">일본 단독 서버</a></li>
+												</ul>
+											</div>
+											<div>
+												<h6 class="dropdown-header">Network</h6>
+												<ul class="list-unstyled">
+													<li><a class="dropdown-item hangle" href="./bypassDefense.html">우회 방어 회선
+															연동</a></li>
+												</ul>
+											</div>
+											<div>
+												<h6 class="dropdown-header">Datacenter</h6>
+												<ul class="list-unstyled">
+													<li><a class="dropdown-item hangle" href="#">코로케이션</a></li>
+													<li><a class="dropdown-item hangle" href="#">클라우드플레어 스펙트럼</a></li>
+												</ul>
+											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link hangle" href="/network">네트워크</a>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">데이터센터</a>
-								<ul class="dropdown-menu">
-									<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">대한민국</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item" href="#">KT Clean-Zone</a></li>
-										<li class="nav-item"><a class="dropdown-item" href="#">SK Clean-Zone</a></li>
-										<li class="nav-item"><a class="dropdown-item" href="#">Kinx Clean-Zone</a></li>
-									</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">일본</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="dropdown-item" href="#">Tokyo-IDC</a></li>
-								</ul>
 								</li>
-								<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">미국</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link hangle" href="/network">네트워크</a>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle hangle" href="#"
+										data-bs-toggle="dropdown">데이터센터</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item" href="#">Cludflare 대한민국 리전</a></li>
+										<li class="dropdown dropdown-submenu dropend"><a
+												class="dropdown-item dropdown-toggle hangle" href="#"
+												data-bs-toggle="dropdown">대한민국</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item"><a class="dropdown-item" href="#">KT Clean-Zone</a>
+												</li>
+												<li class="nav-item"><a class="dropdown-item" href="#">SK Clean-Zone</a>
+												</li>
+												<li class="nav-item"><a class="dropdown-item" href="#">Kinx
+														Clean-Zone</a></li>
+											</ul>
+										</li>
+										<li class="dropdown dropdown-submenu dropend"><a
+												class="dropdown-item dropdown-toggle hangle" href="#"
+												data-bs-toggle="dropdown">일본</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item"><a class="dropdown-item" href="#">Tokyo-IDC</a>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown dropdown-submenu dropend"><a
+												class="dropdown-item dropdown-toggle hangle" href="#"
+												data-bs-toggle="dropdown">미국</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item"><a class="dropdown-item" href="#">Cloudflare 대한민국
+														리전</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle hangle" href="#"
+										data-bs-toggle="dropdown">고객지원·FAQ</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="dropdown-item hangle" href="./contact.html">연락처</a>
+										</li>
+										<li class="dropdown dropdown-submenu dropend"><a
+												class="dropdown-item dropdown-toggle hangle" href="#"
+												data-bs-toggle="dropdown">법률</a>
+											<ul class="dropdown-menu">
+												<li class="nav-item"><a class="dropdown-item hangle"
+														href="./term.html">서비스 이용약관</a></li>
+												<li class="nav-item"><a class="dropdown-item hangle"
+														href="./privacy.html">개인정보 처리방침</a></li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 							</ul>
+							<!-- /.navbar-nav -->
+							<div class="offcanvas-footer d-lg-none">
+								<div>
+									<a href="mailto:tech@Seal.Shield" class="link-inverse">tech@Seal.Shield</a>
+									<br /> +82-70-70-7912-3308<br />
+								</div>
+							</div>
+							<!-- /.offcanvas-footer -->
+						</div>
+						<!-- /.offcanvas-body -->
+					</div>
+					<!-- /.navbar-collapse -->
+					<div class="navbar-other ms-lg-4">
+						<ul class="navbar-nav flex-row align-items-center ms-auto">
+							<li class="nav-item d-none d-md-block">
+								<a href="./contact.html" class="btn btn-sm btn-white rounded-pill hangle">영업 문의</a>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">고객지원·FAQ</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="dropdown-item hangle" href="/contact">연락처</a></li>
-										<li class="dropdown dropdown-submenu dropend"><a class="dropdown-item dropdown-toggle hangle" href="#" data-bs-toggle="dropdown">법률</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item"><a class="dropdown-item hangle" href="/legal/term">서비스 이용약관</a></li>
-											<li class="nav-item"><a class="dropdown-item hangle" href="/legal/privacy">개인정보 처리방침</a></li>
-										</ul>
-									</li>
-								</ul>
+							<li class="nav-item d-lg-none">
+								<button class="hamburger offcanvas-nav-btn"><span></span></button>
 							</li>
 						</ul>
 						<!-- /.navbar-nav -->
-						<div class="offcanvas-footer d-lg-none">
-							<div>
-								<a href="mailto:tech@Seal.Shield" class="link-inverse">tech@Seal.Shield</a>
-								<br /> +82-70-70-7912-3308<br />
-							</div>
-						</div>
-						<!-- /.offcanvas-footer -->
 					</div>
-					<!-- /.offcanvas-body -->
+					<!-- /.navbar-other -->
 				</div>
-				<!-- /.navbar-collapse -->
-				<div class="navbar-other ms-lg-4">
-					<ul class="navbar-nav flex-row align-items-center ms-auto">
-						<li class="nav-item d-none d-md-block">
-							<a href="/contact" class="btn btn-sm btn-white rounded-pill hangle">영업 문의</a>
-						</li>
-						<li class="nav-item d-lg-none">
-							<button class="hamburger offcanvas-nav-btn"><span></span></button>
-						</li>
-					</ul>
-					<!-- /.navbar-nav -->
+				<!-- /.container -->
+			</nav>
+			<!-- /.navbar -->
+		</header>
+		<!-- /header -->
+
+
+
+
+
+
+		<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300"
+			data-image-src="./static/img/photos/bg2.jpg">
+			<div class="container pt-16 pb-17 pt-md-20 pb-md-19 text-center">
+				<div class="row">
+					<div class="col-lg-8 col-xl-8 col-xxl-8 mx-auto" data-cues="slideInDown" data-group="page-title">
+						<h1 class="display-1 text-white fs-60 mb-4 px-md-15 px-lg-0">DDoS Protection, <span
+								class="underline-3 style-2 yellow">Made-Easy</span></h1>
+						<p class="lead fs-24 text-white lh-sm mb-7 mx-md-13 mx-lg-10 hangle">쉽고 간편한 디도스 보안을 다양한 상품과 함께
+							이용할 수 있습니다.</p>
+					</div>
+					<!-- /column -->
 				</div>
-				<!-- /.navbar-other -->
+				<!-- /.row -->
 			</div>
 			<!-- /.container -->
-		</nav>
-		<!-- /.navbar -->
-	</header>
-	<!-- /header -->
-	
-
-
-
-
-
-	<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300" data-image-src="./static/img/photos/bg2.jpg">
-	  <div class="container pt-16 pb-17 pt-md-20 pb-md-19 text-center">
-		<div class="row">
-		  <div class="col-lg-8 col-xl-8 col-xxl-8 mx-auto" data-cues="slideInDown" data-group="page-title">
-			<h1 class="display-1 text-white fs-60 mb-4 px-md-15 px-lg-0">DDoS Protection, <span class="underline-3 style-2 yellow">Made-Easy</span></h1>
-			<p class="lead fs-24 text-white lh-sm mb-7 mx-md-13 mx-lg-10 hangle">쉽고 간편한 디도스 보안을 다양한 상품과 함께 이용할 수 있습니다.</p>
-		  </div>
-		  <!-- /column -->
-		</div>
-		<!-- /.row -->
-	  </div>
-	  <!-- /.container -->
-	  <div class="overflow-hidden">
-		<div class="divider text-light mx-n2">
-		  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
-			<path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z" />
-		  </svg>
-		</div>
-	  </div>
-	</section>
-	<!-- /section -->
-	<section class="wrapper bg-light">
-	  <div class="container pb-10 pb-md-10">
-		<div class="row gx-md-5 gy-5 mt-n19">
-		  <div class="col-md-6 col-xl-3">
-			<div class="card shadow-lg">
-			  <div class="card-body">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="svg-inject icon-svg icon-svg-sm solid-mono text-fuchsia mb-3"><g data-name="Layer 2"><g data-name="Layer 1"><path class="fill-secondary" d="M229 204.06a25.63 25.63 0 00-13.31 3.8l-42.34-29.32V128a10.67 10.67 0 00-21.35 0v56.11a10.63 10.63 0 004.59 8.77l46.9 32.48A26.59 26.59 0 00203 230a26 26 0 1026-26zm0 30.61a4.64 4.64 0 114.64-4.64 4.64 4.64 0 01-4.64 4.64zm-90.33-28.25V128a10.67 10.67 0 10-21.34 0v78.42a26 26 0 1021.34 0zM128 234.67a4.64 4.64 0 114.64-4.64 4.64 4.64 0 01-4.64 4.64z"/><path class="fill-primary" d="M49.84 172.21l14.1-.18 2.73-1.89V128a26.71 26.71 0 0126.67-26.67 26.41 26.41 0 0117.33 6.57 26.14 26.14 0 0134.66 0 26.53 26.53 0 0144 20.1v42.14l.56.39 16.46-.19a8.5 8.5 0 002.08-.31 65.34 65.34 0 00-9.23-127.65A81 81 0 0049.07 62.91 55.07 55.07 0 000 117.57c0 28.03 21 51.5 49.84 54.64z"/><path class="fill-secondary" d="M104 128a10.67 10.67 0 10-21.33 0v50.53l-42.33 29.31A25.91 25.91 0 1053 230a25.68 25.68 0 00-.48-4.67l46.89-32.48a10.63 10.63 0 004.59-8.77V128zM27 234.67a4.64 4.64 0 114.65-4.67 4.64 4.64 0 01-4.65 4.67z"/></g></g></svg>
-				<h4 style="hangle">가상 서버</h4>
-				<p class="mb-2 hangle">Cloudflare Enterprise Spectrum 204Tbps+ 방어서비스를 제공하고, 성능확장이 자유롭고 가성비좋게 이용할 수 있는 서비스입니다.</p>
-				<a href="/product/virtualserver" class="more hover link-fuchsia hangle">더 알아보기</a>
-			  </div>
-			  <!--/.card-body -->
+			<div class="overflow-hidden">
+				<div class="divider text-light mx-n2">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
+						<path fill="currentColor" d="M0,0V60H1440V0A5771,5771,0,0,1,0,0Z" />
+					</svg>
+				</div>
 			</div>
-			<!--/.card -->
-		  </div>
-		  <!--/column -->
-		  <div class="col-md-6 col-xl-3">
-			<div class="card shadow-lg">
-			  <div class="card-body" style="height:362.43px;">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="svg-inject icon-svg icon-svg-sm solid-mono text-violet mb-3"><path class="fill-secondary" d="M250.58 126.14l-56-19a8 8 0 00-5.16 0l-56 19a8 8 0 00-5.42 7.57v42.87c0 52.32 58.38 77.72 60.88 78.8a8.19 8.19 0 003.12.62 7.85 7.85 0 003.12-.64c2.5-1.06 60.88-26.48 60.88-78.78v-42.87a8 8 0 00-5.42-7.57zm-23.52 40.45l-29.33 37.33a10.66 10.66 0 01-15.33 1.5l-18.67-16a10.66 10.66 0 0113.87-16.19l10.22 8.77 22.47-28.57a10.66 10.66 0 0116.77 13.18z"/><path class="fill-primary" d="M202.67 0H32a32 32 0 000 64h170.67a32 32 0 000-64zM32 42.67A10.67 10.67 0 1142.67 32 10.67 10.67 0 0132 42.67zm42.67 0A10.67 10.67 0 1185.34 32a10.67 10.67 0 01-10.67 10.67zM32 85.33a32 32 0 000 64h74.67v-15.57a29.38 29.38 0 0120-27.84l55.89-19a29 29 0 019.49-1.6zM32 128a10.67 10.67 0 1110.67-10.67A10.7 10.7 0 0132 128zm42.67 0a10.67 10.67 0 1110.67-10.67A10.7 10.7 0 0174.67 128zm32 48.53v-5.87H32a32 32 0 000 64h95.68c-12.27-15.57-21.01-35.09-21.01-58.13zM32 213.33a10.67 10.67 0 1110.67-10.66A10.7 10.7 0 0132 213.33zm42.67 0a10.67 10.67 0 1110.67-10.66 10.7 10.7 0 01-10.67 10.66z"/></svg>
-				<h4 style="hangle">단독 서버</h4>
-				<p class="mb-2 hangle">10Gbps+ 업링크, 검증된 하드웨어를 통해 높은 가용성과 고성능 CPU와 Nvme SSD로 구성된 서버를 제공합니다.</p>
-				<a href="/product/dedicatedserver" class="more hover link-violet hangle" style="margin-top:30px;">더 알아보기</a>
-			  </div>
-			  <!--/.card-body -->
+		</section>
+		<!-- /section -->
+		<section class="wrapper bg-light">
+			<div class="container pb-10 pb-md-10">
+				<div class="row gx-md-5 gy-5 mt-n19">
+					<div class="col-md-6 col-xl-3">
+						<div class="card shadow-lg">
+							<div class="card-body">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+									class="svg-inject icon-svg icon-svg-sm solid-mono text-fuchsia mb-3">
+									<g data-name="Layer 2">
+										<g data-name="Layer 1">
+											<path class="fill-secondary"
+												d="M229 204.06a25.63 25.63 0 00-13.31 3.8l-42.34-29.32V128a10.67 10.67 0 00-21.35 0v56.11a10.63 10.63 0 004.59 8.77l46.9 32.48A26.59 26.59 0 00203 230a26 26 0 1026-26zm0 30.61a4.64 4.64 0 114.64-4.64 4.64 4.64 0 01-4.64 4.64zm-90.33-28.25V128a10.67 10.67 0 10-21.34 0v78.42a26 26 0 1021.34 0zM128 234.67a4.64 4.64 0 114.64-4.64 4.64 4.64 0 01-4.64 4.64z" />
+											<path class="fill-primary"
+												d="M49.84 172.21l14.1-.18 2.73-1.89V128a26.71 26.71 0 0126.67-26.67 26.41 26.41 0 0117.33 6.57 26.14 26.14 0 0134.66 0 26.53 26.53 0 0144 20.1v42.14l.56.39 16.46-.19a8.5 8.5 0 002.08-.31 65.34 65.34 0 00-9.23-127.65A81 81 0 0049.07 62.91 55.07 55.07 0 000 117.57c0 28.03 21 51.5 49.84 54.64z" />
+											<path class="fill-secondary"
+												d="M104 128a10.67 10.67 0 10-21.33 0v50.53l-42.33 29.31A25.91 25.91 0 1053 230a25.68 25.68 0 00-.48-4.67l46.89-32.48a10.63 10.63 0 004.59-8.77V128zM27 234.67a4.64 4.64 0 114.65-4.67 4.64 4.64 0 01-4.65 4.67z" />
+										</g>
+									</g>
+								</svg>
+								<h4 style="hangle">가상 서버</h4>
+								<p class="mb-2 hangle">Cloudflare Enterprise Spectrum 204Tbps+ 방어서비스를 제공하고, 성능확장이 자유롭고
+									가성비좋게 이용할 수 있는 서비스입니다.</p>
+								<a href="./virtualserver.html" class="more hover link-fuchsia hangle">더 알아보기</a>
+							</div>
+							<!--/.card-body -->
+						</div>
+						<!--/.card -->
+					</div>
+					<!--/column -->
+					<div class="col-md-6 col-xl-3">
+						<div class="card shadow-lg">
+							<div class="card-body" style="height:362.43px;">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+									class="svg-inject icon-svg icon-svg-sm solid-mono text-violet mb-3">
+									<path class="fill-secondary"
+										d="M250.58 126.14l-56-19a8 8 0 00-5.16 0l-56 19a8 8 0 00-5.42 7.57v42.87c0 52.32 58.38 77.72 60.88 78.8a8.19 8.19 0 003.12.62 7.85 7.85 0 003.12-.64c2.5-1.06 60.88-26.48 60.88-78.78v-42.87a8 8 0 00-5.42-7.57zm-23.52 40.45l-29.33 37.33a10.66 10.66 0 01-15.33 1.5l-18.67-16a10.66 10.66 0 0113.87-16.19l10.22 8.77 22.47-28.57a10.66 10.66 0 0116.77 13.18z" />
+									<path class="fill-primary"
+										d="M202.67 0H32a32 32 0 000 64h170.67a32 32 0 000-64zM32 42.67A10.67 10.67 0 1142.67 32 10.67 10.67 0 0132 42.67zm42.67 0A10.67 10.67 0 1185.34 32a10.67 10.67 0 01-10.67 10.67zM32 85.33a32 32 0 000 64h74.67v-15.57a29.38 29.38 0 0120-27.84l55.89-19a29 29 0 019.49-1.6zM32 128a10.67 10.67 0 1110.67-10.67A10.7 10.7 0 0132 128zm42.67 0a10.67 10.67 0 1110.67-10.67A10.7 10.7 0 0174.67 128zm32 48.53v-5.87H32a32 32 0 000 64h95.68c-12.27-15.57-21.01-35.09-21.01-58.13zM32 213.33a10.67 10.67 0 1110.67-10.66A10.7 10.7 0 0132 213.33zm42.67 0a10.67 10.67 0 1110.67-10.66 10.7 10.7 0 01-10.67 10.66z" />
+									</svg>
+								<h4 style="hangle">단독 서버</h4>
+								<p class="mb-2 hangle">10Gbps+ 업링크, 검증된 하드웨어를 통해 높은 가용성과 고성능 CPU와 Nvme SSD로 구성된 서버를
+									제공합니다.</p>
+								<a href="./dedicatedserver.html" class="more hover link-violet hangle"
+									style="margin-top:30px;">더 알아보기</a>
+							</div>
+							<!--/.card-body -->
+						</div>
+						<!--/.card -->
+					</div>
+					<!--/column -->
+					<div class="col-md-6 col-xl-3">
+						<div class="card shadow-lg">
+							<div class="card-body">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.6 409.6"
+									class="svg-inject icon-svg icon-svg-sm solid-mono text-violet mb-3">
+									<path class="lineal-stroke"
+										d="M204.8 409.6C91.9 409.6 0 317.7 0 204.8c0-28.1 5.7-55.9 17-81.7C62.1 19.4 182.8-28.1 286.6 17c45.5 19.8 82.3 55.5 103.5 100.4 12.9 27.3 19.6 57.2 19.5 87.4v4.1c-.4 23.5-4.9 46.7-13.3 68.7-2.1 5.5-4.5 11.2-7.2 16.6 0 0 0 .1-.1.1l-.1.3c-7.8 16-17.7 30.8-29.3 44.2-4.1 4.9-11.4 5.5-16.2 1.4-4.9-4.1-5.5-11.4-1.4-16.2.1-.1.1-.2.2-.2 10.4-11.9 19.1-25.2 26-39.4l.2-.3c2.4-4.9 4.5-9.8 6.4-14.7 7.4-19.5 11.4-40.1 11.8-60.9v-3.8c.1-26.8-5.9-53.3-17.3-77.6C335 54.8 257.3 13.3 178.1 25 116.6 34 62.9 75.2 38 132.3c-10 22.9-15.1 47.6-15 72.5 0 100.2 81.5 181.8 181.8 181.8 26.1.1 52-5.6 75.7-16.5 5.8-2.6 12.6.1 15.2 5.9 2.5 5.7 0 12.4-5.6 15-26.7 12.3-55.8 18.7-85.3 18.6z" />
+									<path class="lineal-fill"
+										d="M398.1 204.8v3.9c-.4 22.2-4.6 44.1-12.5 64.8-2 5.4-4.3 10.6-6.8 15.7l-.1.3c-19.7-8.2-34.3-25.4-39.3-46.1l-12.2-50.7c-.7-2.8-2.5-5.3-4.9-6.8L311 179c-3.5-2.2-5.5-6.1-5.2-10.2l.8-9.8c.3-3.4 1.9-6.5 4.5-8.7l27.4-23.1c2.6-2.2 5.9-3.3 9.3-3l31.9-2c12.1 25.8 18.4 54 18.4 82.6z" />
+									<path class="lineal-stroke"
+										d="M378.6 301c-1.5 0-3-.3-4.4-.9-23.1-9.6-40.2-29.7-46.1-54.1L316 195.5l-11-6.8c-7.3-4.4-11.4-12.6-10.6-21.1l.8-9.8c.6-6.4 3.6-12.3 8.6-16.5l27.3-23c4.7-3.9 10.6-6 16.7-5.7l31.2-1.9c4.7-.3 9.1 2.3 11.1 6.6 12.9 27.3 19.6 57.2 19.5 87.4v4.1c-.4 23.5-4.9 46.7-13.3 68.7-2.1 5.5-4.5 11.2-7.2 16.6 0 0 0 .1-.1.1l-.1.3c-2 4.1-6 6.5-10.3 6.5zm-61.4-131.6l10.9 6.7c5.1 3.1 8.7 8.1 10.1 13.9l12.2 50.7c2.3 9.6 7.1 18.3 13.9 25.4 2.7 2.8 5.6 5.3 8.8 7.4.6-1.4 1.1-2.8 1.6-4.1 7.4-19.5 11.4-40.1 11.8-60.9v-3.8c.1-24.2-4.8-48.2-14.2-70.5l-23.9 1.5h-1.8c-.3 0-.6.1-.8.3l-27.4 23.1c-.3.2-.4.5-.4.8l-.8 9.5z" />
+									<path class="lineal-fill"
+										d="M197.9 217.9s-22.1 60.7-32 88a19.44 19.44 0 01-18.3 12.8h-.2c-8.3-.1-15.6-5.4-18.2-13.3l-25.4-75.9c-.5-1.4-1.2-2.7-2.2-3.8-1-1.1-2.2-2-3.5-2.7-7.3-3.7-13.3-19-13.3-19l-2.7-22.2c-1.5-12.6-6.9-24.3-15.4-33.7-8.1-9-18.7-15.3-30.4-18.2l-3.4-.8c-2.5-.6-4.1-3.2-3.5-5.8l.3-.9c27.5-58.3 82.2-99.1 145.9-108.8.4-.1.7.1.9.4L191 42.9c.8 1.6 1.2 3.3 1.2 5v2.3c0 3.9-2 7.5-5.4 9.6l-9.2 5.6c-2.5 1.5-4.2 3.9-5 6.6l-11.8 43.2c-1.7 6.3-8.2 10-14.5 8.3-.4-.1-.8-.2-1.2-.4l-6.9-2.6c-5-1.9-12.3-.9-19.4 1-8.7 2.3-14.8 10.3-14.8 19.3 0 8.9 5.8 16.6 14.3 19.2 7.8 2.3 14.6 20.1 36.2 20.1 0 0 38-4.8 43.2 6.9 4.3 9.8 3.8 20.9.2 30.9z" />
+									<path class="lineal-stroke"
+										d="M147.6 330.1h-.2c-13.2-.1-24.9-8.6-29.1-21.1L93 233.2c-10.4-5.3-17-20.5-18.8-25-.4-.9-.6-1.9-.7-2.8l-2.6-22.2c-1.2-10.2-5.6-19.7-12.5-27.3-6.6-7.3-15.2-12.4-24.7-14.8l-3.4-.8c-8.7-2.2-14-11-11.8-19.7.3-1 .6-2 1.1-3 29-61.8 87-105.1 154.6-115.2.6-.1 1.2-.1 1.8-.1 4.7 0 8.9 2.6 11 6.8l14.4 28.8c1.6 3.2 2.4 6.6 2.4 10.2v2.3c0 7.9-4.1 15.3-10.9 19.4l-9.1 5.6-11.8 42.8c-2.8 10.1-12 17.2-22.5 17.2-2.9 0-5.8-.5-8.5-1.6l-6.8-2.6c-.8-.2-1.5-.3-2.3-.2-3.4.1-6.8.7-10 1.6-3.7 1-6.3 4.3-6.3 8.2 0 1.1.2 2.1.6 3.1.9 2.4 2.9 4.3 5.4 5 5.4 1.6 9.3 5.5 13 9.2 5.2 5.2 10.2 10.2 19.3 10.4 5.7-.6 11.5-1 17.3-1 13.1 0 31.2 1.5 37 14.8 5.2 11.8 5.4 25.8.4 39.4 0 0-22.1 60.7-32 88-4.4 12.3-16 20.4-29 20.4zm-44.2-117.4c5.4 2.7 9.4 7.4 11.3 13.1l25.4 75.9c1.1 3.2 4.1 5.4 7.4 5.4h.1c3.3 0 6.3-2.1 7.5-5.2 9.9-27.2 32-88 32-88 2.7-7.5 2.9-15 .6-21.2-1.4-.6-5.7-2.1-16.4-2.1-5.1 0-10.2.3-15.2.9-.5.1-1 .1-1.4.1-19.1 0-29.8-10.8-36.2-17.2-1.2-1.3-2.5-2.5-3.8-3.6-13.1-4.1-22-16.3-22-30 0-14.2 9.6-26.7 23.3-30.4 5.2-1.5 10.6-2.3 16-2.4 3.6-.1 7.1.5 10.4 1.7l7.1 2.7c.1 0 .1 0 .2-.1.1 0 .1-.1.1-.2L161.5 69c1.5-5.6 5.1-10.4 10.1-13.4l9.1-5.5V48l-10.8-21.6c-54.1 10.5-100.4 45-126 93.8 26.9 8.7 46.3 32.3 49.7 60.3l2.4 20.6c2.2 5 5.6 10.4 7.4 11.6z" />
+									</svg>
+								<h4>우회 방어 회선 연동</h4>
+								<p class="mb-2 hangle">클라우드플레어 스펙트럼 서비스를 통해, AnyCast 기반 204Tbps+ 회선을 집,사무실 등 서버가 있는곳에
+									회선만 연동해서 방어서비스를 제공합니다.</p>
+								<a href="bypassDefense.html" class="more hover link-orange hangle">더 알아보기</a>
+							</div>
+							<!--/.card-body -->
+						</div>
+						<!--/.card -->
+					</div>
+					<!--/column -->
+					<div class="col-md-6 col-xl-3">
+						<div class="card shadow-lg">
+							<div class="card-body">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"
+									class="svg-inject icon-svg icon-svg-sm solid-mono text-green mb-3">
+									<g data-name="Layer 2">
+										<path class="fill-secondary"
+											d="M61.33 173v-25.3a21.33 21.33 0 10-16 0V176a8.14 8.14 0 001.92 5.22l30.08 35.08V248a8 8 0 0016 0v-34.67a8.12 8.12 0 00-1.92-5.22zM128 106.67a21.31 21.31 0 00-8 41.07V248a8 8 0 0016 0V147.74a21.31 21.31 0 00-8-41.07zM224 128a21.33 21.33 0 10-29.33 19.74V173l-30.08 35.09a8 8 0 00-1.92 5.21V248a8 8 0 0016 0v-31.71l30.08-35.09a8 8 0 001.92-5.22v-28.25A21.29 21.29 0 00224 128z" />
+										<path class="fill-primary"
+											d="M224 0H32A32.09 32.09 0 000 32v170.67a32.09 32.09 0 0032 32h24v-10.45l-9.28-10.88H32a10.7 10.7 0 01-10.67-10.67V53.34h213.34v149.33A10.7 10.7 0 01224 213.34h-14.72L200 224.22v10.45h24a32.09 32.09 0 0032-32V32a32.09 32.09 0 00-32-32z" />
+									</g>
+								</svg>
+								<h4>일본 단독 서버</h4>
+								<p class="mb-2 hangle">AWS급 최하단 10G 백본용량으로 디도스방어 서비스를 제공하고, 고성능 하이엔드 급 서버 장비로 물리 단독 서버를
+									제공합니다.</p>
+								</br>
+								<a href="./japanDedicatedServer.html" class="more hover link-green hangle">더 알아보기</a>
+							</div>
+							<!--/.card-body -->
+						</div>
+						<!--/.card -->
+					</div>
+					<!--/column -->
+				</div>
+				<!--/.row -->
 			</div>
-			<!--/.card -->
-		  </div>
-		  <!--/column -->
-		  <div class="col-md-6 col-xl-3">
-			<div class="card shadow-lg">
-			  <div class="card-body">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 409.6 409.6" class="svg-inject icon-svg icon-svg-sm solid-mono text-violet mb-3"><path class="lineal-stroke" d="M204.8 409.6C91.9 409.6 0 317.7 0 204.8c0-28.1 5.7-55.9 17-81.7C62.1 19.4 182.8-28.1 286.6 17c45.5 19.8 82.3 55.5 103.5 100.4 12.9 27.3 19.6 57.2 19.5 87.4v4.1c-.4 23.5-4.9 46.7-13.3 68.7-2.1 5.5-4.5 11.2-7.2 16.6 0 0 0 .1-.1.1l-.1.3c-7.8 16-17.7 30.8-29.3 44.2-4.1 4.9-11.4 5.5-16.2 1.4-4.9-4.1-5.5-11.4-1.4-16.2.1-.1.1-.2.2-.2 10.4-11.9 19.1-25.2 26-39.4l.2-.3c2.4-4.9 4.5-9.8 6.4-14.7 7.4-19.5 11.4-40.1 11.8-60.9v-3.8c.1-26.8-5.9-53.3-17.3-77.6C335 54.8 257.3 13.3 178.1 25 116.6 34 62.9 75.2 38 132.3c-10 22.9-15.1 47.6-15 72.5 0 100.2 81.5 181.8 181.8 181.8 26.1.1 52-5.6 75.7-16.5 5.8-2.6 12.6.1 15.2 5.9 2.5 5.7 0 12.4-5.6 15-26.7 12.3-55.8 18.7-85.3 18.6z"/><path class="lineal-fill" d="M398.1 204.8v3.9c-.4 22.2-4.6 44.1-12.5 64.8-2 5.4-4.3 10.6-6.8 15.7l-.1.3c-19.7-8.2-34.3-25.4-39.3-46.1l-12.2-50.7c-.7-2.8-2.5-5.3-4.9-6.8L311 179c-3.5-2.2-5.5-6.1-5.2-10.2l.8-9.8c.3-3.4 1.9-6.5 4.5-8.7l27.4-23.1c2.6-2.2 5.9-3.3 9.3-3l31.9-2c12.1 25.8 18.4 54 18.4 82.6z"/><path class="lineal-stroke" d="M378.6 301c-1.5 0-3-.3-4.4-.9-23.1-9.6-40.2-29.7-46.1-54.1L316 195.5l-11-6.8c-7.3-4.4-11.4-12.6-10.6-21.1l.8-9.8c.6-6.4 3.6-12.3 8.6-16.5l27.3-23c4.7-3.9 10.6-6 16.7-5.7l31.2-1.9c4.7-.3 9.1 2.3 11.1 6.6 12.9 27.3 19.6 57.2 19.5 87.4v4.1c-.4 23.5-4.9 46.7-13.3 68.7-2.1 5.5-4.5 11.2-7.2 16.6 0 0 0 .1-.1.1l-.1.3c-2 4.1-6 6.5-10.3 6.5zm-61.4-131.6l10.9 6.7c5.1 3.1 8.7 8.1 10.1 13.9l12.2 50.7c2.3 9.6 7.1 18.3 13.9 25.4 2.7 2.8 5.6 5.3 8.8 7.4.6-1.4 1.1-2.8 1.6-4.1 7.4-19.5 11.4-40.1 11.8-60.9v-3.8c.1-24.2-4.8-48.2-14.2-70.5l-23.9 1.5h-1.8c-.3 0-.6.1-.8.3l-27.4 23.1c-.3.2-.4.5-.4.8l-.8 9.5z"/><path class="lineal-fill" d="M197.9 217.9s-22.1 60.7-32 88a19.44 19.44 0 01-18.3 12.8h-.2c-8.3-.1-15.6-5.4-18.2-13.3l-25.4-75.9c-.5-1.4-1.2-2.7-2.2-3.8-1-1.1-2.2-2-3.5-2.7-7.3-3.7-13.3-19-13.3-19l-2.7-22.2c-1.5-12.6-6.9-24.3-15.4-33.7-8.1-9-18.7-15.3-30.4-18.2l-3.4-.8c-2.5-.6-4.1-3.2-3.5-5.8l.3-.9c27.5-58.3 82.2-99.1 145.9-108.8.4-.1.7.1.9.4L191 42.9c.8 1.6 1.2 3.3 1.2 5v2.3c0 3.9-2 7.5-5.4 9.6l-9.2 5.6c-2.5 1.5-4.2 3.9-5 6.6l-11.8 43.2c-1.7 6.3-8.2 10-14.5 8.3-.4-.1-.8-.2-1.2-.4l-6.9-2.6c-5-1.9-12.3-.9-19.4 1-8.7 2.3-14.8 10.3-14.8 19.3 0 8.9 5.8 16.6 14.3 19.2 7.8 2.3 14.6 20.1 36.2 20.1 0 0 38-4.8 43.2 6.9 4.3 9.8 3.8 20.9.2 30.9z"/><path class="lineal-stroke" d="M147.6 330.1h-.2c-13.2-.1-24.9-8.6-29.1-21.1L93 233.2c-10.4-5.3-17-20.5-18.8-25-.4-.9-.6-1.9-.7-2.8l-2.6-22.2c-1.2-10.2-5.6-19.7-12.5-27.3-6.6-7.3-15.2-12.4-24.7-14.8l-3.4-.8c-8.7-2.2-14-11-11.8-19.7.3-1 .6-2 1.1-3 29-61.8 87-105.1 154.6-115.2.6-.1 1.2-.1 1.8-.1 4.7 0 8.9 2.6 11 6.8l14.4 28.8c1.6 3.2 2.4 6.6 2.4 10.2v2.3c0 7.9-4.1 15.3-10.9 19.4l-9.1 5.6-11.8 42.8c-2.8 10.1-12 17.2-22.5 17.2-2.9 0-5.8-.5-8.5-1.6l-6.8-2.6c-.8-.2-1.5-.3-2.3-.2-3.4.1-6.8.7-10 1.6-3.7 1-6.3 4.3-6.3 8.2 0 1.1.2 2.1.6 3.1.9 2.4 2.9 4.3 5.4 5 5.4 1.6 9.3 5.5 13 9.2 5.2 5.2 10.2 10.2 19.3 10.4 5.7-.6 11.5-1 17.3-1 13.1 0 31.2 1.5 37 14.8 5.2 11.8 5.4 25.8.4 39.4 0 0-22.1 60.7-32 88-4.4 12.3-16 20.4-29 20.4zm-44.2-117.4c5.4 2.7 9.4 7.4 11.3 13.1l25.4 75.9c1.1 3.2 4.1 5.4 7.4 5.4h.1c3.3 0 6.3-2.1 7.5-5.2 9.9-27.2 32-88 32-88 2.7-7.5 2.9-15 .6-21.2-1.4-.6-5.7-2.1-16.4-2.1-5.1 0-10.2.3-15.2.9-.5.1-1 .1-1.4.1-19.1 0-29.8-10.8-36.2-17.2-1.2-1.3-2.5-2.5-3.8-3.6-13.1-4.1-22-16.3-22-30 0-14.2 9.6-26.7 23.3-30.4 5.2-1.5 10.6-2.3 16-2.4 3.6-.1 7.1.5 10.4 1.7l7.1 2.7c.1 0 .1 0 .2-.1.1 0 .1-.1.1-.2L161.5 69c1.5-5.6 5.1-10.4 10.1-13.4l9.1-5.5V48l-10.8-21.6c-54.1 10.5-100.4 45-126 93.8 26.9 8.7 46.3 32.3 49.7 60.3l2.4 20.6c2.2 5 5.6 10.4 7.4 11.6z"/></svg>
-				<h4>우회 방어 회선 연동</h4>
-				<p class="mb-2 hangle">클라우드플레어 스펙트럼 서비스를 통해, AnyCast 기반 204Tbps+ 회선을 집,사무실 등 서버가 있는곳에 회선만 연동해서 방어서비스를 제공합니다.</p>
-				<a href="/product/cdn" class="more hover link-orange hangle">더 알아보기</a>
-			  </div>
-			  <!--/.card-body -->
-			</div>
-			<!--/.card -->
-		  </div>
-		  <!--/column -->
-		  <div class="col-md-6 col-xl-3">
-			<div class="card shadow-lg">
-			  <div class="card-body">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="svg-inject icon-svg icon-svg-sm solid-mono text-green mb-3"><g data-name="Layer 2"><path class="fill-secondary" d="M61.33 173v-25.3a21.33 21.33 0 10-16 0V176a8.14 8.14 0 001.92 5.22l30.08 35.08V248a8 8 0 0016 0v-34.67a8.12 8.12 0 00-1.92-5.22zM128 106.67a21.31 21.31 0 00-8 41.07V248a8 8 0 0016 0V147.74a21.31 21.31 0 00-8-41.07zM224 128a21.33 21.33 0 10-29.33 19.74V173l-30.08 35.09a8 8 0 00-1.92 5.21V248a8 8 0 0016 0v-31.71l30.08-35.09a8 8 0 001.92-5.22v-28.25A21.29 21.29 0 00224 128z"/><path class="fill-primary" d="M224 0H32A32.09 32.09 0 000 32v170.67a32.09 32.09 0 0032 32h24v-10.45l-9.28-10.88H32a10.7 10.7 0 01-10.67-10.67V53.34h213.34v149.33A10.7 10.7 0 01224 213.34h-14.72L200 224.22v10.45h24a32.09 32.09 0 0032-32V32a32.09 32.09 0 00-32-32z"/></g></svg>
-				<h4>일본 단독 서버</h4>
-				<p class="mb-2 hangle">AWS급 최하단 10G 백본용량으로 디도스방어 서비스를 제공하고, 고성능 하이엔드 급 서버 장비로 물리 단독 서버를 제공합니다.</p>
-				</br>
-				<a href="/product/dia" class="more hover link-green hangle">더 알아보기</a>
-			  </div>
-			  <!--/.card-body -->
-			</div>
-			<!--/.card -->
-		  </div>
-		  <!--/column -->
-		</div>
-		<!--/.row -->
-	  </div>
-	  <!-- /.container -->
-	</section>
-	<!-- /section -->
+			<!-- /.container -->
+		</section>
+		<!-- /section -->
 
 
 
 
-	
+
 	</div>
 	<!-- /.content-wrapper -->
 	<footer>
 		<div class="container pt-10 pb-7">
-		  <div class="row gx-lg-0 gy-6">
-			<div class="col-lg-4">
-			  <div class="widget">
-				  <h2 class="logo-dark mb-1" style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d style="color: #27cf7b;">.</d></h2>
-					<p class="lead mb-1">Next Generation Cloud Platform</p>
-				  <p class="mb-0 hangle" style="font-size: .6rem;">
-					  대표이사 : 김기훈<br>
-					  사업자등록번호 : 622-10-16198<br>
-					  통신판매업 신고번호 : 2020-인천연수구-0758<br>
-				  </p>
-			  </div>
-			  <!-- /.widget -->
-			</div>
-			<!-- /column -->
-			<div class="col-lg-4">
-			  <div class="widget">
-				<div class="d-flex flex-row">
-				  <div>
-					<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
-				  </div>
-				  <div>
-					<h5 class="mb-1 hangle">고객 지원</h5>
-					<p class="mb-0 hangle">영업 문의 sales@Seal.Shield<br />기술 문의 tech@Seal.Shield<br />전화 문의 +82-70-70-7912-3308</p>
-				  </div>
+			<div class="row gx-lg-0 gy-6">
+				<div class="col-lg-4">
+					<div class="widget">
+						<h2 class="logo-dark mb-1"
+							style="color: #000000; font-family: Poppins, sans-serif; font-weight: 600;">Seal Shield<d
+								style="color: #27cf7b;">.</d>
+						</h2>
+						<p class="lead mb-1">Next Generation Cloud Platform</p>
+						<p class="mb-0 hangle" style="font-size: .6rem;">
+							대표이사 : 김기훈<br>
+							사업자등록번호 : 622-10-16198<br>
+							통신판매업 신고번호 : 2020-인천연수구-0758<br>
+						</p>
+					</div>
+					<!-- /.widget -->
 				</div>
-				<!--/div -->
-			  </div>
-			  <!-- /.widget -->
-			</div>
-			<!-- /column -->
-			<div class="col-lg-4">
-			  <div class="widget">
-				<div class="d-flex flex-row">
-				  <div>
-					<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
-				  </div>
-				  <div class="align-self-start justify-content-start hangle">
-					<h5 class="mb-1 hangle">주소</h5>
-					<address>인천광역시 연수구 인천타워대로 99</address>
-				  </div>
+				<!-- /column -->
+				<div class="col-lg-4">
+					<div class="widget">
+						<div class="d-flex flex-row">
+							<div>
+								<div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i>
+								</div>
+							</div>
+							<div>
+								<h5 class="mb-1 hangle">고객 지원</h5>
+								<p class="mb-0 hangle">영업 문의 sales@Seal.Shield<br />기술 문의 tech@Seal.Shield<br />전화 문의
+									+82-70-70-7912-3308</p>
+							</div>
+						</div>
+						<!--/div -->
+					</div>
+					<!-- /.widget -->
 				</div>
-				<!--/div -->
-			  </div>
-			  <!-- /.widget -->
+				<!-- /column -->
+				<div class="col-lg-4">
+					<div class="widget">
+						<div class="d-flex flex-row">
+							<div>
+								<div class="icon text-primary fs-28 me-4 mt-n1"> <i
+										class="uil uil-location-pin-alt"></i> </div>
+							</div>
+							<div class="align-self-start justify-content-start hangle">
+								<h5 class="mb-1 hangle">주소</h5>
+								<address>인천광역시 연수구 인천타워대로 99</address>
+							</div>
+						</div>
+						<!--/div -->
+					</div>
+					<!-- /.widget -->
+				</div>
+				<!-- /column -->
 			</div>
-			<!-- /column -->
-		  </div>
-		  <!--/.row -->
-		  <hr class="mt-7 mt-md-7 mb-7" />
-		  <div class="d-md-flex align-items-center justify-content-between">
-			<p class="mb-2 mb-lg-0">© 2023 Seal Shield Inc, All Rights Reserved.</p>
-			<nav class="nav mb-0 hangle">
-			  <a href="/legal/term" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">서비스 이용약관</a>
-			  <a href="/legal/privacy" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">개인정보 처리방침</a>
-			</nav>
-			<!-- /.social -->
-		  </div>
+			<!--/.row -->
+			<hr class="mt-7 mt-md-7 mb-7" />
+			<div class="d-md-flex align-items-center justify-content-between">
+				<p class="mb-2 mb-lg-0">© 2023 Seal Shield Inc, All Rights Reserved.</p>
+				<nav class="nav mb-0 hangle">
+					<a href="./term.html" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">서비스 이용약관</a>
+					<a href="./privacy.html" style="font-size: .7rem; margin: 0 0.7rem 0 0; color: #60697b;">개인정보
+						처리방침</a>
+				</nav>
+				<!-- /.social -->
+			</div>
 		</div>
 		<!-- /.container -->
-	  </footer>
-	  <div class="progress-wrap">
-		  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-		  <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-		  </svg>
-	  </div>
-	  <script src="./static/js/plugins.js"></script>
-	  <script src="./static/js/theme.js"></script>
-	  <script>
-		  function closePop(){
-			  var popup = document.getElementsByClassName("kbDpsJ");
-			  popup[0].style.display = "none";
-		  }
-	  </script>
-	  <article role="dialog" class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0 kbDpsJ">
-		  <h2 class="a11y-hidden">Channel Talk pop-up</h2>
-		  <div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 gcPqyR">
-		  <button type="button" class="PCLabelButton__LabelButton-ch-front__sc-1viw4do-0 kdbiBm">
-			  <div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 iOwXlC">
-			  <div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 kqRZza">궁금한 건 텔레그램으로 문의하세요</div>
-			  <div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 jOeHgT">
-				  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 iCEngM" data-testid="bezier-react-icon" color="bgtxt-green-normal" margintop="0" marginright="0" marginbottom="0" marginleft="0">
-				  <path fill="currentColor" fill-rule="evenodd" d="m18.54 10.226-4.319-1 2.082-7.083c.146-.496-.468-.86-.833-.493L5.146 12.002a.5.5 0 0 0 .242.84l4.32 1-2.084 7.082c-.146.498.468.861.834.494l10.323-10.352a.5.5 0 0 0-.24-.84Z" clip-rule="evenodd"></path>
-				  </svg>빠르게 답변 받으실 수 있어요</span>
-			  </div>
-			  </div>
-		  </button>
-		  <div class="PCLabelButton__CloseButtonArea-ch-front__sc-1viw4do-7 imEiwF">
-			  <span class="a11y-hidden">Close</span>
-			  <button class="PCLabelButton__CloseButton-ch-front__sc-1viw4do-6 flvCTH" onclick="closePop()">
-			  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" foundation="[object Object]" class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dVEMjZ PCLabelButton__CloseIcon-ch-front__sc-1viw4do-5 hLYLWV" defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0" marginleft="0" withtheme="false">
-				  <path fill="currentColor" d="M4.92893 4.92893C4.34315 5.51472 4.34315 6.46447 4.92893 7.05025L9.87868 12L4.92893 16.9497C4.34315 17.5355 4.34315 18.4853 4.92893 19.0711C5.51472 19.6569 6.46447 19.6569 7.05025 19.0711L12 14.1213L16.9497 19.0711C17.5355 19.6569 18.4853 19.6569 19.0711 19.0711C19.6569 18.4853 19.6569 17.5355 19.0711 16.9497L14.1213 12L19.0711 7.05025C19.6569 6.46447 19.6569 5.51472 19.0711 4.92893C18.4853 4.34315 17.5355 4.34315 16.9497 4.92893L12 9.87868L7.05025 4.92893C6.46447 4.34315 5.51472 4.34315 4.92893 4.92893Z"></path>
-			  </svg>
-			  </button>
-		  </div>
-		  </div>
-	  </article>
-	  <div data-ch-testid="launcher" class="Launcherstyled__LauncherButtonWrapper-ch-front__sc-vjd8p8-0 fhSQvV">
-		  <button type="button" onclick="window.open('https://t.me/sealshield/')">
-		  <div class="ChatButtonContainer__Container-ch-front__sc-1xjuzon-0 bKNCWH">
-			  <span class="a11y-hidden">Channel Chat Button</span>
-			  <div class="SenderButtonView__Wrapper-ch-front__sc-16y2woi-0 omWkp">
-			  <div src="./static/img/tele_logo.png" class="SenderButtonView__SenderAvatarBg-ch-front__sc-16y2woi-1 LVsny"></div>
-			  </div>
-			  <div class="IconButtonView__Background-ch-front__sc-vtu014-0 jaYpSL">
-			  <svg width="36" height="36" color="#ffffff">
-				  <use href="#channel-filled"></use>
-			  </svg>
-			  </div>
-			  <div class="MinimizeButtonView__Wrapper-ch-front__sc-11fv1z6-0 aSXzX">
-			  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 pJGcx" data-testid="bezier-react-icon" color="txt-black-darker" margintop="0" marginright="0" marginbottom="0" marginleft="0" aria-hidden="true">
-				  <path fill="currentColor" fill-rule="evenodd" d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.051A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.535a1 1 0 1 0 1.414 1.414L12 13.414l3.536 3.536a1 1 0 0 0 1.414-1.415L13.414 12l3.536-3.536Z" clip-rule="evenodd"></path>
-			  </svg>
-			  </div>
-		  </div>
-		  </button>
-	  </div>
+	</footer>
+	<div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+		</svg>
+	</div>
+	<script src="./static/js/plugins.js"></script>
+	<script src="./static/js/theme.js"></script>
+	<script>
+		function closePop() {
+			var popup = document.getElementsByClassName("kbDpsJ");
+			popup[0].style.display = "none";
+		}
+	</script>
+	<article role="dialog" class="PCBubblePopupLayer__PCBubbleWrapper-ch-front__sc-qr66bs-0 kbDpsJ">
+		<h2 class="a11y-hidden">Channel Talk pop-up</h2>
+		<div class="PCLabelButton__Wrapper-ch-front__sc-1viw4do-1 gcPqyR">
+			<button type="button" class="PCLabelButton__LabelButton-ch-front__sc-1viw4do-0 kdbiBm">
+				<div class="PCLabelButton__TextWrapper-ch-front__sc-1viw4do-2 iOwXlC">
+					<div class="PCLabelButton__Title-ch-front__sc-1viw4do-3 kqRZza">궁금한 건 텔레그램으로 문의하세요</div>
+					<div class="PCLabelButton__Status-ch-front__sc-1viw4do-4 jOeHgT">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24"
+							foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 iCEngM"
+							data-testid="bezier-react-icon" color="bgtxt-green-normal" margintop="0" marginright="0"
+							marginbottom="0" marginleft="0">
+							<path fill="currentColor" fill-rule="evenodd"
+								d="m18.54 10.226-4.319-1 2.082-7.083c.146-.496-.468-.86-.833-.493L5.146 12.002a.5.5 0 0 0 .242.84l4.32 1-2.084 7.082c-.146.498.468.861.834.494l10.323-10.352a.5.5 0 0 0-.24-.84Z"
+								clip-rule="evenodd"></path>
+						</svg>빠르게 답변 받으실 수 있어요</span>
+					</div>
+				</div>
+			</button>
+			<div class="PCLabelButton__CloseButtonArea-ch-front__sc-1viw4do-7 imEiwF">
+				<span class="a11y-hidden">Close</span>
+				<button class="PCLabelButton__CloseButton-ch-front__sc-1viw4do-6 flvCTH" onclick="closePop()">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+						foundation="[object Object]"
+						class="InnerIconstyled__Icon-ch-front__sc-197h5bb-0 dVEMjZ PCLabelButton__CloseIcon-ch-front__sc-1viw4do-5 hLYLWV"
+						defaultopacity="1" hoveredopacity="1" margintop="0" marginright="0" marginbottom="0"
+						marginleft="0" withtheme="false">
+						<path fill="currentColor"
+							d="M4.92893 4.92893C4.34315 5.51472 4.34315 6.46447 4.92893 7.05025L9.87868 12L4.92893 16.9497C4.34315 17.5355 4.34315 18.4853 4.92893 19.0711C5.51472 19.6569 6.46447 19.6569 7.05025 19.0711L12 14.1213L16.9497 19.0711C17.5355 19.6569 18.4853 19.6569 19.0711 19.0711C19.6569 18.4853 19.6569 17.5355 19.0711 16.9497L14.1213 12L19.0711 7.05025C19.6569 6.46447 19.6569 5.51472 19.0711 4.92893C18.4853 4.34315 17.5355 4.34315 16.9497 4.92893L12 9.87868L7.05025 4.92893C6.46447 4.34315 5.51472 4.34315 4.92893 4.92893Z">
+						</path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</article>
+	<div data-ch-testid="launcher" class="Launcherstyled__LauncherButtonWrapper-ch-front__sc-vjd8p8-0 fhSQvV">
+		<button type="button" onclick="window.open('https://t.me/sealshield/')">
+			<div class="ChatButtonContainer__Container-ch-front__sc-1xjuzon-0 bKNCWH">
+				<span class="a11y-hidden">Channel Chat Button</span>
+				<div class="SenderButtonView__Wrapper-ch-front__sc-16y2woi-0 omWkp">
+					<div src="./static/img/tele_logo.png"
+						class="SenderButtonView__SenderAvatarBg-ch-front__sc-16y2woi-1 LVsny"></div>
+				</div>
+				<div class="IconButtonView__Background-ch-front__sc-vtu014-0 jaYpSL">
+					<svg width="36" height="36" color="#ffffff">
+						<use href="#channel-filled"></use>
+					</svg>
+				</div>
+				<div class="MinimizeButtonView__Wrapper-ch-front__sc-11fv1z6-0 aSXzX">
+					<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24"
+						foundation="[object Object]" class="Iconstyled__Icon-sc-1iqwu2g-0 pJGcx"
+						data-testid="bezier-react-icon" color="txt-black-darker" margintop="0" marginright="0"
+						marginbottom="0" marginleft="0" aria-hidden="true">
+						<path fill="currentColor" fill-rule="evenodd"
+							d="M16.95 8.464a1 1 0 1 0-1.414-1.414L12 10.586 8.465 7.051A1 1 0 0 0 7.05 8.464L10.586 12 7.05 15.535a1 1 0 1 0 1.414 1.414L12 13.414l3.536 3.536a1 1 0 0 0 1.414-1.415L13.414 12l3.536-3.536Z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</div>
+			</div>
+		</button>
+	</div>
 </body>
 
 </html>
