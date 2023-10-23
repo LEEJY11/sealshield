@@ -20,7 +20,40 @@
 			font-family: 'NanumSquare';
 			font-weight: 450;
 		}
+
+		.banner-wrap {align-items:center;justify-content:center;position:absolute !important;top:80px;left:150px;display:flex;z-index:9;font-family:"NanumSquqre";}
+		.banner-inner {background:#000;}
+        .banner-footer {margin-bottom:0;color:#fff;width:100%;display:flex;align-items:center;justify-content:flex-end;padding:5px;gap:15px;}
+        .banner-footer li {list-style:none;margin-bottom:0;cursor:pointer;display:flex;align-items:center;}
+        .banner-footer li > span {border:1px solid #fff;display:inline-block;width:20px;font-size:12px;margin-right:5px;text-align:center;}
 	</style>
+
+	<script type="text/javascript">
+		const getCookie = (name) => {
+			const value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+			return value ? value[2] : null;
+		}
+
+		const closeModal = () => {
+			const banner = document.getElementById('banner');
+			banner.style.display = "none"
+		}
+
+		const closeModalDuringOneday = () => {
+			let date = new Date(Date.now() + 86400e3);
+			date = date.toUTCString();
+			document.cookie = `bannerClose=T; expires=${date}`
+			closeModal();
+		}
+
+		function setBanner (){
+			if (getCookie('bannerClose')) {
+				closeModal();
+			} else {
+				document.getElementById("banner").style.display = "flex;"
+			};
+		}
+	</script>
 </head>
 
 <body>
@@ -173,7 +206,15 @@
 
 
 
-
+		<div id="banner" class="banner-wrap">
+			<div class="banner-inner">
+				<img src="./banner.jpg" alt="배너 이미지">
+				<ul class="banner-footer">
+					<li onclick="closeModalDuringOneday();"><span>X</span>24시간동안 보지않기</li>
+					<li onclick="closeModal();"><span>X</span>닫기</li>
+				</ul>
+			</div>
+		</div>
 		<section class="wrapper image-wrapper bg-image bg-overlay bg-overlay-300"
 			data-image-src="./static/img/photos/bg2.jpg">
 			<div class="container pt-16 pb-17 pt-md-20 pb-md-19 text-center">
